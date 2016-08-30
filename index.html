@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dominion Black Market Card Selector</title>
+        <script src="jquery.min.js"></script>
+        <script>
+            function checkAll(formname, checktoggle){
+                var checkboxes = new Array(); 
+                checkboxes = document[formname].getElementsByTagName('input');
+                for (var i=0; i<checkboxes.length; i++)  {
+                    if (checkboxes[i].type == 'checkbox')   {
+                        checkboxes[i].checked = checktoggle;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            function generate(){
+                setlist=[];
+                if (sets.base.checked){
+                    console.log("Adding base set");
+                }
+                if (sets.intrigue.checked){
+                    console.log("Adding intrigue");
+                }
+                if (sets.seaside.checked){
+                    console.log("Adding seaside");
+                }
+                if (sets.alchemy.checked){
+                    console.log("Adding alchemy");
+                }
+                if (sets.prosperity.checked){
+                    console.log("Adding prosperity");
+                }
+                if (sets.cornucopia.checked){
+                    console.log("Adding cornucopia");
+                }
+                if (sets.hinterlands.checked){
+                    console.log("Adding hinterlands");
+                }
+                if (sets.dark.checked){
+                    console.log("Adding dark (ages)");
+                }
+                if (sets.guilds.checked){
+                    console.log("Adding guilds");
+                }
+                if (sets.adventures.checked){
+                    console.log("Adding adventures");
+                }
+                if (sets.empires.checked){
+                    console.log("Adding empires");
+                }
+                if (sets.envoy.checked){
+                    console.log("Adding envoy");
+                }
+                if (sets.walled.checked){
+                    console.log("Adding walled (village)");
+                }
+                if (sets.governor.checked){
+                    console.log("Adding governor");
+                }
+                if (sets.stash.checked){
+                    console.log("Adding stash");
+                }
+                if (sets.prince.checked){
+                    console.log("Adding prince");
+                }
+            }
+        </script>
+        <h1>Select the sets you want, and click Generate Deck.</h1>
+        <form name="sets" action="" method="get">
+            <input class="dominion_sets" type="checkbox" name="base" value="Base" id="checkbox-1">Base Set<br>
+            <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
+            <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
+            <input class="dominion_sets" type="checkbox" name="alchemy" value="Alchemy">Alchemy<br>
+            <input class="dominion_sets" type="checkbox" name="prosperity" value="Prosperity">Prosperity<br>
+            <input class="dominion_sets" type="checkbox" name="cornucopia" value="Cornucopia">Cornucopia<br>
+            <input class="dominion_sets" type="checkbox" name="hinterlands" value="Hinterlands">Hinterlands<br>
+            <input class="dominion_sets" type="checkbox" name="dark" value="Dark">Dark Ages<br>
+            <input class="dominion_sets" type="checkbox" name="guilds" value="Guilds">Guilds<br>
+            <input class="dominion_sets" type="checkbox" name="adventures" value="Adventures">Adventures<br>
+            <input class="dominion_sets" type="checkbox" name="empires" value="Empires">Empires<br>
+            <input class="dominion_sets" type="checkbox" name="envoy" value="Envoy">Envoy<br>
+            <input class="dominion_sets" type="checkbox" name="walled" value="Walled">Walled Village<br>
+            <input class="dominion_sets" type="checkbox" name="governor" value="Governor">Governor<br>
+            <input class="dominion_sets" type="checkbox" name="stash" value="Stash">Stash<br>
+            <input class="dominion_sets" type="checkbox" name="prince" value="Prince">Prince<br>
+            <input type="checkbox" name="all" value="Select All" onclick="checkAll('sets',true)">Select All<br>
+            <input type="checkbox" name="all" value="Unselect All" onclick="checkAll('sets',false)">Unselect All<br>
+            <button type="button" onclick="generate()">Generate Deck</button>
+        </form>
+    </body>
+</html>
