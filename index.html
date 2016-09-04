@@ -3,6 +3,8 @@
     <head>
         <title>Dominion Black Market Card Selector</title>
         <script src="jquery.min.js"></script>
+    </head>
+    <body>
         <script>
             function checkAll(formname, checktoggle){
                 var checkboxes = new Array(); 
@@ -13,65 +15,474 @@
                     }
                 }
             }
-        </script>
-    </head>
-    <body>
-        <script>
+            var setlist=[];
+            var cards=[];
+            var random_card1;
+            var random_card2;
+            var random_card3;
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex;
+
+                // While there remain elements to shuffle...
+                while (0 !== currentIndex) {
+
+                    // Pick a remaining element...
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+
+                    // And swap it with the current element.
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+                return array;
+            }
+            window.onload = function(){
+                card_1_image=document.getElementById("card_1");
+                card_2_image=document.getElementById("card_2");
+                card_3_image=document.getElementById("card_3");
+                card_2_span=document.getElementById("card_2_name");
+                card_3_span=document.getElementById("card_3_name");
+                buy_card_1=document.getElementById("buy1");
+                buy_card_2=document.getElementById("buy2");
+                buy_card_3=document.getElementById("buy3");
+                buy_none=document.getElementById("buynone");
+                draw_button=document.getElementById("draw_button");
+            }
+                var what, a = arguments, L = a.length, ax;
+                while (L > 1 && arr.length) {
+                    what = a[--L];
+                    while ((ax= arr.indexOf(what)) !== -1) {
+                        arr.splice(ax, 1);
+                    }
+                }
+                return arr;
+            }
             function generate(){
-                setlist=[];
-                if (sets.base.checked){
-                    console.log("Adding base set");
+                if (1==1) {
+                    if (sets.base.checked){
+                        console.log("Adding base set");
+                        setlist.push("base");
+                    }
+                    if (sets.intrigue.checked){
+                        console.log("Adding intrigue");
+                        setlist.push("intrigue");
+                    }
+                    if (sets.seaside.checked){
+                        console.log("Adding seaside");
+                        setlist.push("seaside");
+                    }
+                    if (sets.alchemy.checked){
+                        console.log("Adding alchemy");
+                        setlist.push("alchemy");
+                    }
+                    if (sets.prosperity.checked){
+                        console.log("Adding prosperity");
+                        setlist.push("prosperity");
+                    }
+                    if (sets.cornucopia.checked){
+                        console.log("Adding cornucopia");
+                        setlist.push("cornucopia");
+                    }
+                    if (sets.hinterlands.checked){
+                        console.log("Adding hinterlands");
+                        setlist.push("hinterlands");
+                    }
+                    if (sets.dark.checked){
+                        console.log("Adding dark (ages)");
+                        setlist.push("dark");
+                    }
+                    if (sets.guilds.checked){
+                        console.log("Adding guilds");
+                        setlist.push("guilds");
+                    }
+                    if (sets.adventures.checked){
+                        console.log("Adding adventures");
+                        setlist.push("adventures");
+                    }
+                    if (sets.empires.checked){
+                        console.log("Adding empires");
+                        setlist.push("empires");
+                    }
+                    if (sets.envoy.checked){
+                        console.log("Adding envoy");
+                        setlist.push("envoy");
+                    }
+                    if (sets.walled.checked){
+                        console.log("Adding walled (village)");
+                        setlist.push("walled");
+                    }
+                    if (sets.governor.checked){
+                        console.log("Adding governor");
+                        setlist.push("governor");
+                    }
+                    if (sets.stash.checked){
+                        console.log("Adding stash");
+                        setlist.push("stash");
+                    }
+                    if (sets.prince.checked){
+                        console.log("Adding prince");
+                        setlist.push("prince");
+                    }
                 }
-                if (sets.intrigue.checked){
-                    console.log("Adding intrigue");
+                if (setlist.length < 1){
+                    alert("Please pick at least one set!");
                 }
-                if (sets.seaside.checked){
-                    console.log("Adding seaside");
-                }
-                if (sets.alchemy.checked){
-                    console.log("Adding alchemy");
-                }
-                if (sets.prosperity.checked){
-                    console.log("Adding prosperity");
-                }
-                if (sets.cornucopia.checked){
-                    console.log("Adding cornucopia");
-                }
-                if (sets.hinterlands.checked){
-                    console.log("Adding hinterlands");
-                }
-                if (sets.dark.checked){
-                    console.log("Adding dark (ages)");
-                }
-                if (sets.guilds.checked){
-                    console.log("Adding guilds");
-                }
-                if (sets.adventures.checked){
-                    console.log("Adding adventures");
-                }
-                if (sets.empires.checked){
-                    console.log("Adding empires");
-                }
-                if (sets.envoy.checked){
-                    console.log("Adding envoy");
-                }
-                if (sets.walled.checked){
-                    console.log("Adding walled (village)");
-                }
-                if (sets.governor.checked){
-                    console.log("Adding governor");
-                }
-                if (sets.stash.checked){
-                    console.log("Adding stash");
-                }
-                if (sets.prince.checked){
-                    console.log("Adding prince");
+                else{
+                    document.getElementById("choose_sets").style.display = "none";
+                    document.getElementById("cards_to_exclude").style.display = "block";
+                    if (setlist.indexOf("base")!=-1) {
+                        cards.push("adventurer");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("bureaucrat");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("cellar");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("chancellor");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("chapel");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("councilroom");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("feast");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("festival");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("gardens");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("laboratory");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("library");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("market");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("militia");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("mine");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("moat");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("moneylender");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("remodel");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("smithy");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("spy");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("thief");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("throneroom");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("village");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("woodcutter");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("workshop");
+                        console.log("added card " + cards[cards.length - 1]);
+                        document.getElementById("base-cards-to-exclude").style.display = "inline";
+                    }
+                    if (setlist.indexOf("intrigue")!=-1) {
+                        cards.push("baron");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("bridge");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("conspirator");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("coppersmith");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("courtyard");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("duke");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("greathall");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("harem");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("ironworks");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("masquerade");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("miningvillage");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("minion");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("nobles");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("pawn");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("saboteur");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("scout");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("secretchamber");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("shantytown");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("steward");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("swindler");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("torturer");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("tradingpost");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("tribute");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("upgrade");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("wishingwell");
+                        console.log("added card " + cards[cards.length - 1]);
+                        document.getElementById("intrigue-cards-to-exclude").style.display = "inline";
+                    }
+                    if (setlist.indexOf("seaside")!=-1) {
+                        cards.push("ambassador");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("bureaucrat");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("cellar");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("chancellor");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("chapel");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("councilroom");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("feast");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("festival");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("gardens");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("laboratory");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("library");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("market");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("militia");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("mine");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("moat");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("moneylender");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("remodel");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("smithy");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("spy");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("thief");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("throneroom");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("village");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("woodcutter");
+                        console.log("added card " + cards[cards.length - 1]);
+                        cards.push("workshop");
+                        console.log("added card " + cards[cards.length - 1]);
+                        document.getElementById("base-cards-to-exclude").style.display = "inline";
+                    }
                 }
             }
+            function exclude_cards(){
+                if (setlist.indexOf("base")!=-1){
+                    if (excludedcards.adventurer.checked){
+                        
+                        removeA(cards,"adventurer");
+                        console.log(cards);
+                    }
+                    if (excludedcards.bureaucrat.checked){
+                        
+                        removeA(cards,"bureaucrat");
+                        console.log(cards);
+                    }
+                    if (excludedcards.cellar.checked){
+                        
+                        removeA(cards,"cellar");
+                        console.log(cards);
+                    }
+                    if (excludedcards.chancellor.checked){
+                        
+                        removeA(cards,"chancellor");
+                        console.log(cards);
+                    }
+                    if (excludedcards.chapel.checked){
+                        
+                        removeA(cards,"chapel");
+                        console.log(cards);
+                    }
+                    if (excludedcards.councilroom.checked){
+                        
+                        removeA(cards,"councilroom");
+                        console.log(cards);
+                    }
+                    if (excludedcards.feast.checked){
+                        
+                        removeA(cards,"feast");
+                        console.log(cards);
+                    }
+                    if (excludedcards.festival.checked){
+                        
+                        removeA(cards,"festival");
+                        console.log(cards);
+                    }
+                    if (excludedcards.gardens.checked){
+                        
+                        removeA(cards,"gardens");
+                        console.log(cards);
+                    }
+                    if (excludedcards.laboratory.checked){
+                        
+                        removeA(cards,"laboratory");
+                        console.log(cards);
+                    }
+                    if (excludedcards.library.checked){
+                        
+                        removeA(cards,"library");
+                        console.log(cards);
+                    }
+                    if (excludedcards.market.checked){
+                        
+                        removeA(cards,"market");
+                        console.log(cards);
+                    }
+                    if (excludedcards.militia.checked){
+                        
+                        removeA(cards,"militia");
+                        console.log(cards);
+                    }
+                    if (excludedcards.mine.checked){
+                        
+                        removeA(cards,"mine");
+                        console.log(cards);
+                    }
+                    if (excludedcards.moat.checked){
+                        
+                        removeA(cards,"moat");
+                        console.log(cards);
+                    }
+                    if (excludedcards.moneylender.checked){
+                        
+                        removeA(cards,"moneylender");
+                        console.log(cards);
+                    }
+                    if (excludedcards.remodel.checked){
+                        
+                        removeA(cards,"remodel");
+                        console.log(cards);
+                    }
+                    if (excludedcards.smithy.checked){
+                        
+                        removeA(cards,"smithy");
+                        console.log(cards);
+                    }
+                    if (excludedcards.spy.checked){
+                        
+                        removeA(cards,"spy");
+                        console.log(cards);
+                    }
+                    if (excludedcards.thief.checked){
+                        
+                        removeA(cards,"thief");
+                        console.log(cards);
+                    }
+                    if (excludedcards.throneroom.checked){
+                        
+                        removeA(cards,"throneroom");
+                        console.log(cards);
+                    }
+                    if (excludedcards.village.checked){
+                        
+                        removeA(cards,"village");
+                        console.log(cards);
+                    }
+                    if (excludedcards.witch.checked){
+                        
+                        removeA(cards,"witch");
+                        console.log(cards);
+                    }
+                    if (excludedcards.woodcutter.checked){
+                        
+                        removeA(cards,"woodcutter");
+                        console.log(cards);
+                    }
+                    if (excludedcards.workshop.checked){
+                        
+                        removeA(cards,"workshop");
+                        console.log(cards);
+                    }
+                }
+                cards=shuffle(cards);
+                document.getElementById("cards_to_exclude").style.display = "none";
+                document.getElementById("deck_select").style.display = "block";
+            }
+            function draw_cards(){
+                console.log(cards);
+                random_card1 = cards[0];
+                removeA(cards,random_card1);
+                random_card2 = cards[0];
+                removeA(cards,random_card2);
+                random_card3 = cards[0];
+                removeA(cards,random_card3);
+                card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
+                card_2_image.innerHTML = "<img src='images/all/" + random_card2 + ".jpg'>";
+                card_3_image.innerHTML = "<img src='images/all/" + random_card3 + ".jpg'>";
+                card_1_span.innerHTML = random_card1;//should eventually draw from dictionary for CORRECT name(with spaces and caps)
+                card_2_span.innerHTML = random_card2;
+                card_3_span.innerHTML = random_card3;
+                draw_button.style.display = "none";
+                card_1_image.style.display = "inline";
+                card_2_image.style.display = "inline";
+                card_3_image.style.display = "inline";
+                buy_card_1.style.display = "inline";
+                buy_card_2.style.display = "inline";
+                buy_card_3.style.display = "inline";
+                buy_none.style.display = "inline";
+            }
+            function discardall(){
+                cards.push(random_card1);
+                cards.push(random_card2);
+                cards.push(random_card3);
+                draw_button.style.display = "inline";
+                card_1_image.style.display = "none";
+                card_2_image.style.display = "none";
+                card_3_image.style.display = "none";
+                buy_card_1.style.display = "none";
+                buy_card_2.style.display = "none";
+                buy_card_3.style.display = "none";
+                buy_none.style.display = "none";
+            }
+            function buy(card_to_buy){
+                if (card_to_buy==1){
+                    cards.push(random_card2);
+                    cards.push(random_card3);
+                }
+                else if (card_to_buy==2){
+                    cards.push(random_card1);
+                    cards.push(random_card3);
+                }
+                else if (card_to_buy==3){
+                    cards.push(random_card1);
+                    cards.push(random_card2);
+                }
+                draw_button.style.display = "inline";
+                card_1_image.style.display = "none";
+                card_2_image.style.display = "none";
+                card_3_image.style.display = "none";
+                buy_card_1.style.display = "none";
+                buy_card_2.style.display = "none";
+                buy_card_3.style.display = "none";
+                buy_none.style.display = "none";
+            }
         </script>
-        <h1>Select the sets you want, and click Generate Deck.</h1>
-        <form name="sets" action="" method="get">
-            <input class="dominion_sets" type="checkbox" name="base" value="Base" id="checkbox-1">Base Set<br>
+        <div id="choose_sets">
+            <h1>Select the sets you want, and click Generate Deck.</h1>
+            <form name="sets" action="" method="get">
+            <input class="dominion_sets" type="checkbox" name="base" value="Base">Base Set<br>
             <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
             <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
             <input class="dominion_sets" type="checkbox" name="alchemy" value="Alchemy">Alchemy<br>
@@ -91,5 +502,93 @@
             <input type="checkbox" name="all" value="Unselect All" onclick="checkAll('sets',false)">Unselect All<br>
             <button type="button" onclick="generate()">Generate Deck</button>
         </form>
+        </div>
+        <div id="cards_to_exclude" style="display: none;">
+            <h1>
+                Which cards do you NOT want in the black market deck(already in game, or you just don't like)
+            </h1>
+            <form id="form-cards-to-exclude" name="excludedcards" action="" method="get">
+                <div id="base-cards-to-exclude" style="display: none;">
+                    <h2>Base Set</h2>
+                    <input type="checkbox" name="adventurer" value="exclude">Adventurer<br>
+                    <input type="checkbox" name="bureaucrat" value="exclude">Bureaucrat<br>
+                    <input type="checkbox" name="cellar" value="exclude">Cellar<br>
+                    <input type="checkbox" name="chancellor" value="exclude">Chancellor<br>
+                    <input type="checkbox" name="chapel" value="exclude">Chapel<br>
+                    <input type="checkbox" name="councilroom" value="exclude">Council Room<br>
+                    <input type="checkbox" name="feast" value="exclude">Feast<br>
+                    <input type="checkbox" name="festival" value="exclude">Festival<br>
+                    <input type="checkbox" name="gardens" value="exclude">Gardens<br>
+                    <input type="checkbox" name="laboratory" value="exclude">Laboratory<br>
+                    <input type="checkbox" name="library" value="exclude">Library<br>
+                    <input type="checkbox" name="market" value="exclude">Market<br>
+                    <input type="checkbox" name="militia" value="exclude">Militia<br>
+                    <input type="checkbox" name="mine" value="exclude">Mine<br>
+                    <input type="checkbox" name="moat" value="exclude">Moat<br>
+                    <input type="checkbox" name="moneylender" value="exclude">Moneylender<br>
+                    <input type="checkbox" name="remodel" value="exclude">Remodel<br>
+                    <input type="checkbox" name="smithy" value="exclude">Smithy<br>
+                    <input type="checkbox" name="spy" value="exclude">Spy<br>
+                    <input type="checkbox" name="thief" value="exclude">Thief<br>
+                    <input type="checkbox" name="throneroom" value="exclude">Throne Room<br>
+                    <input type="checkbox" name="village" value="exclude">Village<br>
+                    <input type="checkbox" name="witch" value="exclude">Witch<br>
+                    <input type="checkbox" name="woodcutter" value="exclude">Woodcutter<br>
+                    <input type="checkbox" name="workshop" value="exclude">Workshop<br>
+                </div>
+                <div id="intrigue-cards-to-exclude" style="display: none;">
+                    <h2>Intrigue</h2>
+                    <input type="checkbox" name="baron" value="exclude">Baron<br>
+                    <input type="checkbox" name="bridge" value="exclude">Bridge<br>
+                    <input type="checkbox" name="conspirator" value="exclude">Conspirator<br>
+                    <input type="checkbox" name="coppersmith" value="exclude">Coppersmith<br>
+                    <input type="checkbox" name="courtyard" value="exclude">Courtyard<br>
+                    <input type="checkbox" name="duke" value="exclude">Duke<br>
+                    <input type="checkbox" name="greathall" value="exclude">Great Hall<br>
+                    <input type="checkbox" name="harem" value="exclude">Harem<br>
+                    <input type="checkbox" name="ironworks" value="exclude">Ironworks<br>
+                    <input type="checkbox" name="masquerade" value="exclude">Masquerade<br>
+                    <input type="checkbox" name="miningvillage" value="exclude">Mining Village<br>
+                    <input type="checkbox" name="minion" value="exclude">Minion<br>
+                    <input type="checkbox" name="nobles" value="exclude">Nobles<br>
+                    <input type="checkbox" name="pawn" value="exclude">Pawn<br>
+                    <input type="checkbox" name="saboteur" value="exclude">Saboteur<br>
+                    <input type="checkbox" name="scout" value="exclude">Scout<br>
+                    <input type="checkbox" name="secretchamber" value="exclude">Secret Chamber<br>
+                    <input type="checkbox" name="shantytown" value="exclude">Shanty Town<br>
+                    <input type="checkbox" name="steward" value="exclude">Steward<br>
+                    <input type="checkbox" name="swindler" value="exclude">Swindler<br>
+                    <input type="checkbox" name="torturer" value="exclude">Torturer<br>
+                    <input type="checkbox" name="tradingpost" value="exclude">Trading Post<br>
+                    <input type="checkbox" name="tribute" value="exclude">Tribute<br>
+                    <input type="checkbox" name="upgrade" value="exclude">Upgrade<br>
+                    <input type="checkbox" name="wishingwell" value="exclude">Wishing Well<br>
+                </div>
+                <button type="button" onclick="exclude_cards()">Continue</button>
+            </form>
+        </div><!--Need to add all other sets(besides base and intrigue)-->
+        <div id="deck_select" style="display:none;">
+            <h1>
+                Your deck has been completed
+            </h1>
+            <div id="cards_selected">
+                <span id="card_1"></span>
+                <span id="card_2"></span>
+                <span id="card_3"></span>
+                <button id="buynone" type="button" onclick="discardall()">Discard All</button>
+                <button id="buy1" type="button" onclick="buy(1)">
+                    Buy card <span id="card_1_name"></span>
+                </button>
+                <button id="buy2" type="button" onclick="buy(2)">
+                    Buy card <span id="card_2_name"></span>
+                </button>
+                <button id="buy3" type="button" onclick="buy(3)">
+                    Buy card <span id="card_3_name"></span>
+                </button>
+            </div>
+            <button id="draw_button" type="button" onclick="draw_cards()">
+                Draw Cards
+            </button>
+        </div>
     </body>
 </html>
