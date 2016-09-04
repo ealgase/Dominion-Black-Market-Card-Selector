@@ -35,12 +35,14 @@
                     array[currentIndex] = array[randomIndex];
                     array[randomIndex] = temporaryValue;
                 }
+
                 return array;
             }
             window.onload = function(){
                 card_1_image=document.getElementById("card_1");
                 card_2_image=document.getElementById("card_2");
                 card_3_image=document.getElementById("card_3");
+                card_1_span=document.getElementById("card_1_name");
                 card_2_span=document.getElementById("card_2_name");
                 card_3_span=document.getElementById("card_3_name");
                 buy_card_1=document.getElementById("buy1");
@@ -49,6 +51,7 @@
                 buy_none=document.getElementById("buynone");
                 draw_button=document.getElementById("draw_button");
             }
+            function removeA(arr) {
                 var what, a = arguments, L = a.length, ax;
                 while (L > 1 && arr.length) {
                     what = a[--L];
