@@ -1040,6 +1040,56 @@
                         removeA(cards,"wharf");
                         console.log(cards);
                     }
+                
+                if (setlist.indexOf("alchemy")!=-1){
+                    if (excludedcards.alchemist.checked){
+                        removeA(cards,"alchemist");
+                        console.log(cards);
+                    }
+                    if (excludedcards.apothecary.checked){
+                        removeA(cards,"apothecary");
+                        console.log(cards);
+                    }
+                    if (excludedcards.apprentice.checked){
+                        removeA(cards,"apprentice");
+                        console.log(cards);
+                    }
+                    if (excludedcards.familiar.checked){
+                        removeA(cards,"familiar");
+                        console.log(cards);
+                    }
+                    if (excludedcards.golem.checked){
+                        removeA(cards,"golem");
+                        console.log(cards);
+                    }
+                    if (excludedcards.herbalist.checked){
+                        removeA(cards,"herbalist");
+                        console.log(cards);
+                    }
+                    if (excludedcards.philosophersstone.checked){
+                        removeA(cards,"philosophersstone");
+                        console.log(cards);
+                    }
+                    if (excludedcards.possession.checked){
+                        removeA(cards,"possession");
+                        console.log(cards);
+                    }
+                    if (excludedcards.scryingpool.checked){
+                        removeA(cards,"scryingpool");
+                        console.log(cards);
+                    }
+                    if (excludedcards.transmute.checked){
+                        removeA(cards,"transmute");
+                        console.log(cards);
+                    }
+                    if (excludedcards.university.checked){
+                        removeA(cards,"university");
+                        console.log(cards);
+                    }
+                    if (excludedcards.vineyard.checked){
+                        removeA(cards,"vineyard");
+                        console.log(cards);
+                    }
                 }
                 /*
                 for future sets:
@@ -1226,6 +1276,21 @@
                     <input type="checkbox" name="treasury" value="exclude">Treasury<br>
                     <input type="checkbox" name="warehouse" value="exclude">Warehouse<br>
                     <input type="checkbox" name="wharf" value="exclude">Wharf<br>
+                </div>
+                <div id="alchemy-cards-to-exclude" style="display: none;">
+                    <h2>Alchemy</h2>
+                    <input type="checkbox" name="alchemist" value="exclude">Alchemist<br>
+                    <input type="checkbox" name="apothecary" value="exclude">Apothecary<br>
+                    <input type="checkbox" name="apprentice" value="exclude">Apprentice<br>
+                    <input type="checkbox" name="familiar" value="exclude">Familiar<br>
+                    <input type="checkbox" name="golem" value="exclude">Golem<br>
+                    <input type="checkbox" name="herbalist" value="exclude">Herbalist<br>
+                    <input type="checkbox" name="philosophersstone" value="exclude">Philosophers Stone<br>
+                    <input type="checkbox" name="possession" value="exclude">Possession<br>
+                    <input type="checkbox" name="scryingpool" value="exclude">Scrying Pool<br>
+                    <input type="checkbox" name="transmute" value="exclude">Transmute<br>
+                    <input type="checkbox" name="university" value="exclude">University<br>
+                    <input type="checkbox" name="vineyard" value="exclude">Vineyard<br>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
