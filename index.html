@@ -1193,6 +1193,60 @@
                         console.log(cards);
                     }
                 }
+                if (setlist.indexOf("cornucopia")!=-1){
+                    if (excludedcards.fairgrounds.checked){
+                        removeA(cards,"fairgrounds");
+                        console.log(cards);
+                    }
+                    if (excludedcards.farmingvillage.checked){
+                        removeA(cards,"farmingvillage");
+                        console.log(cards);
+                    }
+                    if (excludedcards.fortuneteller.checked){
+                        removeA(cards,"fortuneteller");
+                        console.log(cards);
+                    }
+                    if (excludedcards.hamlet.checked){
+                        removeA(cards,"hamlet");
+                        console.log(cards);
+                    }
+                    if (excludedcards.harvest.checked){
+                        removeA(cards,"harvest");
+                        console.log(cards);
+                    }
+                    if (excludedcards.hornofplenty.checked){
+                        removeA(cards,"hornofplenty");
+                        console.log(cards);
+                    }
+                    if (excludedcards.horsetraders.checked){
+                        removeA(cards,"horsetraders");
+                        console.log(cards);
+                    }
+                    if (excludedcards.huntingparty.checked){
+                        removeA(cards,"huntingparty");
+                        console.log(cards);
+                    }
+                    if (excludedcards.jester.checked){
+                        removeA(cards,"jester");
+                        console.log(cards);
+                    }
+                    if (excludedcards.menagerie.checked){
+                        removeA(cards,"menagerie");
+                        console.log(cards);
+                    }
+                    if (excludedcards.remake.checked){
+                        removeA(cards,"remake");
+                        console.log(cards);
+                    }
+                    if (excludedcards.tournament.checked){
+                        removeA(cards,"tournament");
+                        console.log(cards);
+                    }
+                    if (excludedcards.youngwitch.checked){
+                        removeA(cards,"youngwitch");
+                        console.log(cards);
+                    }
+                }
                 /*
                 for future sets:
                 if (setlist.indexOf("")!=-1){
@@ -1421,6 +1475,22 @@
                     <input type="checkbox" name="venture" value="exclude">Venture<br>
                     <input type="checkbox" name="watchtower" value="exclude">Watchtower<br>
                     <input type="checkbox" name="workersvillage" value="exclude">Workers Village<br>
+                </div>
+                <div id="cornucopia-cards-to-exclude" style="display: none;">
+                    <h2>Cornucopia</h2>
+                    <input type="checkbox" name="fairgrounds" value="exclude">Fairgrounds<br>
+                    <input type="checkbox" name="farmingvillage" value="exclude">Farming Village<br>
+                    <input type="checkbox" name="fortuneteller" value="exclude">Fortune Teller<br>
+                    <input type="checkbox" name="hamlet" value="exclude">Hamlet<br>
+                    <input type="checkbox" name="harvest" value="exclude">Harvest<br>
+                    <input type="checkbox" name="hornofplenty" value="exclude">Horn of Plenty<br>
+                    <input type="checkbox" name="horsetraders" value="exclude">Horse Traders<br>
+                    <input type="checkbox" name="huntingparty" value="exclude">Hunting Party<br>
+                    <input type="checkbox" name="jester" value="exclude">Jester<br>
+                    <input type="checkbox" name="menagerie" value="exclude">Menagerie<br>
+                    <input type="checkbox" name="remake" value="exclude">Remake<br>
+                    <input type="checkbox" name="tournament" value="exclude">Tournament<br>
+                    <input type="checkbox" name="youngwitch" value="exclude">Young Witch<br>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
