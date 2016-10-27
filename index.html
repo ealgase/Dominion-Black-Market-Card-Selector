@@ -1247,6 +1247,166 @@
                         console.log(cards);
                     }
                 }
+                if (setlist.indexOf("dark")!=-1){
+                    if (excludedcards.altar.checked){
+                        removeA(cards,"altar");
+                        console.log(cards);
+                    }
+                    if (excludedcards.armory.checked){
+                        removeA(cards,"armory");
+                        console.log(cards);
+                    }
+                    if (excludedcards.banditcamp.checked){
+                        removeA(cards,"banditcamp");
+                        console.log(cards);
+                    }
+                    if (excludedcards.bandofmisfits.checked){
+                        removeA(cards,"bandofmisfits");
+                        console.log(cards);
+                    }
+                    if (excludedcards.beggar.checked){
+                        removeA(cards,"beggar");
+                        console.log(cards);
+                    }
+                    if (excludedcards.catacombs.checked){
+                        removeA(cards,"catacombs");
+                        console.log(cards);
+                    }
+                    if (excludedcards.count.checked){
+                        removeA(cards,"count");
+                        console.log(cards);
+                    }
+                    if (excludedcards.counterfeit.checked){
+                        removeA(cards,"counterfeit");
+                        console.log(cards);
+                    }
+                    if (excludedcards.cultist.checked){
+                        removeA(cards,"cultist");
+                        console.log(cards);
+                    }
+                    if (excludedcards.deathcart.checked){
+                        removeA(cards,"deathcart");
+                        console.log(cards);
+                    }
+                    if (excludedcards.feodum.checked){
+                        removeA(cards,"feodum");
+                        console.log(cards);
+                    }
+                    if (excludedcards.forager.checked){
+                        removeA(cards,"forager");
+                        console.log(cards);
+                    }
+                    if (excludedcards.fortress.checked){
+                        removeA(cards,"fortress");
+                        console.log(cards);
+                    }
+                    if (excludedcards.graverobber.checked){
+                        removeA(cards,"graverobber");
+                        console.log(cards);
+                    }
+                    if (excludedcards.hermit.checked){
+                        removeA(cards,"hermit");
+                        console.log(cards);
+                    }
+                    if (excludedcards.huntinggrounds.checked){
+                        removeA(cards,"huntinggrounds");
+                        console.log(cards);
+                    }
+                    if (excludedcards.ironmonger.checked){
+                        removeA(cards,"ironmonger");
+                        console.log(cards);
+                    }
+                    if (excludedcards.junkdealer.checked){
+                        removeA(cards,"junkdealer");
+                        console.log(cards);
+                    }
+                    if (excludedcards.knights.checked){
+                        removeA(cards,"knights");
+                        console.log(cards);
+                    }
+                    if (excludedcards.marauder.checked){
+                        removeA(cards,"marauder");
+                        console.log(cards);
+                    }
+                    if (excludedcards.marketsquare.checked){
+                        removeA(cards,"marketsquare");
+                        console.log(cards);
+                    }
+                    if (excludedcards.mystic.checked){
+                        removeA(cards,"mystic");
+                        console.log(cards);
+                    }
+                    if (excludedcards.pillage.checked){
+                        removeA(cards,"pillage");
+                        console.log(cards);
+                    }
+                    if (excludedcards.poorhouse.checked){
+                        removeA(cards,"poorhouse");
+                        console.log(cards);
+                    }
+                    if (excludedcards.procession.checked){
+                        removeA(cards,"procession");
+                        console.log(cards);
+                    }
+                    if (excludedcards.rats.checked){
+                        removeA(cards,"rats");
+                        console.log(cards);
+                    }
+                }
+                if (setlist.indexOf("guilds")!=-1){
+                    if (excludedcards.advisor.checked){
+                        removeA(cards,"advisor");
+                        console.log(cards);
+                    }
+                    if (excludedcards.baker.checked){
+                        removeA(cards,"baker");
+                        console.log(cards);
+                    }
+                    if (excludedcards.butcher.checked){
+                        removeA(cards,"butcher");
+                        console.log(cards);
+                    }
+                    if (excludedcards.candlestickmaker.checked){
+                        removeA(cards,"candlestickmaker");
+                        console.log(cards);
+                    }
+                    if (excludedcards.doctor.checked){
+                        removeA(cards,"doctor");
+                        console.log(cards);
+                    }
+                    if (excludedcards.herald.checked){
+                        removeA(cards,"herald");
+                        console.log(cards);
+                    }
+                    if (excludedcards.journeyman.checked){
+                        removeA(cards,"journeyman");
+                        console.log(cards);
+                    }
+                    if (excludedcards.masterpiece.checked){
+                        removeA(cards,"masterpiece");
+                        console.log(cards);
+                    }
+                    if (excludedcards.merchantguild.checked){
+                        removeA(cards,"merchantguild");
+                        console.log(cards);
+                    }
+                    if (excludedcards.plaza.checked){
+                        removeA(cards,"plaza");
+                        console.log(cards);
+                    }
+                    if (excludedcards.soothsayer.checked){
+                        removeA(cards,"soothsayer");
+                        console.log(cards);
+                    }
+                    if (excludedcards.stonemason.checked){
+                        removeA(cards,"stonemason");
+                        console.log(cards);
+                    }
+                    if (excludedcards.taxman.checked){
+                        removeA(cards,"taxman");
+                        console.log(cards);
+                    }
+                }
                 /*
                 for future sets:
                 if (setlist.indexOf("")!=-1){
@@ -1491,6 +1651,89 @@
                     <input type="checkbox" name="remake" value="exclude">Remake<br>
                     <input type="checkbox" name="tournament" value="exclude">Tournament<br>
                     <input type="checkbox" name="youngwitch" value="exclude">Young Witch<br>
+                </div>
+                <div id="hinterlands-cards-to-exclude" style="display: none;">
+                    <h2>Hinterlands</h2>
+                    <input type="checkbox" name="bordervillage" value="exclude">Border Village<br>
+                    <input type="checkbox" name="cache" value="exclude">Cache<br>
+                    <input type="checkbox" name="cartographer" value="exclude">Cartographer<br>
+                    <input type="checkbox" name="crossroads" value="exclude">Crossroads<br>
+                    <input type="checkbox" name="develop" value="exclude">Develop<br>
+                    <input type="checkbox" name="duchess" value="exclude">Duchess<br>
+                    <input type="checkbox" name="embassy" value="exclude">Embassy<br>
+                    <input type="checkbox" name="farmland" value="exclude">Farmland<br>
+                    <input type="checkbox" name="foolsgold" value="exclude">Fools Gold<br>
+                    <input type="checkbox" name="haggler" value="exclude">Haggler<br>
+                    <input type="checkbox" name="highway" value="exclude">Highway<br>
+                    <input type="checkbox" name="illgottengains" value="exclude">Ill Gotten Gains<br>
+                    <input type="checkbox" name="inn" value="exclude">Inn<br>
+                    <input type="checkbox" name="jackofalltrades" value="exclude">Jack of all Trades<br>
+                    <input type="checkbox" name="mandarin" value="exclude">Mandarin<br>
+                    <input type="checkbox" name="margrave" value="exclude">Margrave<br>
+                    <input type="checkbox" name="noblebrigand" value="exclude">Noble Brigand<br>
+                    <input type="checkbox" name="nomadcamp" value="exclude">Nomad Camp<br>
+                    <input type="checkbox" name="oasis" value="exclude">Oasis<br>
+                    <input type="checkbox" name="oracle" value="exclude">Oracle<br>
+                    <input type="checkbox" name="scheme" value="exclude">Scheme<br>
+                    <input type="checkbox" name="silkroad" value="exclude">Silk Road<br>
+                    <input type="checkbox" name="spicemerchant" value="exclude">Spice Merchant<br>
+                    <input type="checkbox" name="stables" value="exclude">Stables<br>
+                    <input type="checkbox" name="trader" value="exclude">Trader<br>
+                    <input type="checkbox" name="tunnel" value="exclude">Tunnel<br>
+                </div>
+                <div id="dark-cards-to-exclude" style="display: none;">
+                    <h2>Dark Ages</h2>
+                    <input type="checkbox" name="altar" value="exclude">Altar<br>
+                    <input type="checkbox" name="armory" value="exclude">Armory<br>
+                    <input type="checkbox" name="banditcamp" value="exclude">Bandit Camp<br>
+                    <input type="checkbox" name="bandofmisfits" value="exclude">Band of Misfits<br>
+                    <input type="checkbox" name="beggar" value="exclude">Beggar<br>
+                    <input type="checkbox" name="catacombs" value="exclude">Catacombs<br>
+                    <input type="checkbox" name="count" value="exclude">Count<br>
+                    <input type="checkbox" name="counterfeit" value="exclude">Counterfeit<br>
+                    <input type="checkbox" name="cultist" value="exclude">Cultist<br>
+                    <input type="checkbox" name="deathcart" value="exclude">Death Cart<br>
+                    <input type="checkbox" name="feodum" value="exclude">Feodum<br>
+                    <input type="checkbox" name="forager" value="exclude">Forager<br>
+                    <input type="checkbox" name="fortress" value="exclude">Fortress<br>
+                    <input type="checkbox" name="graverobber" value="exclude">Grave Robber<br>
+                    <input type="checkbox" name="hermit" value="exclude">Hermit<br>
+                    <input type="checkbox" name="huntinggrounds" value="exclude">Hunting Grounds<br>
+                    <input type="checkbox" name="ironmonger" value="exclude">Iron Monger<br>
+                    <input type="checkbox" name="junkdealer" value="exclude">Junk Dealer<br>
+                    <input type="checkbox" name="knights" value="exclude">Knights<br>
+                    <input type="checkbox" name="marauder" value="exclude">Marauder<br>
+                    <input type="checkbox" name="marketsquare" value="exclude">Market Square<br>
+                    <input type="checkbox" name="mystic" value="exclude">Mystic<br>
+                    <input type="checkbox" name="pillage" value="exclude">Pillage<br>
+                    <input type="checkbox" name="poorhouse" value="exclude">Poor House<br>
+                    <input type="checkbox" name="procession" value="exclude">Procession<br>
+                    <input type="checkbox" name="rats" value="exclude">Rats<br>
+                    <input type="checkbox" name="rebuild" value="exclude">Rebuild<br>
+                    <input type="checkbox" name="rouge" value="exclude">Rouge<br>
+                    <input type="checkbox" name="sage" value="exclude">Sage<br>
+                    <input type="checkbox" name="scavenger" value="exclude">Scavenger<br>
+                    <input type="checkbox" name="squire" value="exclude">Squire<br>
+                    <input type="checkbox" name="storeroom" value="exclude">Storeroom<br>
+                    <input type="checkbox" name="urchin" value="exclude">Urchin<br>
+                    <input type="checkbox" name="vagrant" value="exclude">Vagrant<br>
+                    <input type="checkbox" name="wanderingminstrel" value="exclude">Wandering Minstrel<br>
+                </div>
+                <div id="guilds-cards-to-exclude" style="display: none;">
+                    <h2>Guilds</h2>
+                    <input type="checkbox" name="advisor" value="exclude">Advisor<br>
+                    <input type="checkbox" name="baker" value="exclude">Baker<br>
+                    <input type="checkbox" name="butcher" value="exclude">Butcher<br>
+                    <input type="checkbox" name="candlestickmaker" value="exclude">Candlestick Maker<br>
+                    <input type="checkbox" name="doctor" value="exclude">Doctor<br>
+                    <input type="checkbox" name="herald" value="exclude">Herald<br>
+                    <input type="checkbox" name="journeyman" value="exclude">Journeyman<br>
+                    <input type="checkbox" name="masterpiece" value="exclude">Masterpiece<br>
+                    <input type="checkbox" name="merchantguild" value="exclude">Merchant Guild<br>
+                    <input type="checkbox" name="plaza" value="exclude">Plaza<br>
+                    <input type="checkbox" name="soothsayer" value="exclude">Soothsayer<br>
+                    <input type="checkbox" name="stonemason" value="exclude">Stonemason<br>
+                    <input type="checkbox" name="taxman" value="exclude">Taxman<br>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
