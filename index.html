@@ -1407,6 +1407,124 @@
                         console.log(cards);
                     }
                 }
+                if (setlist.indexOf("adventures")!=-1){
+                    if (excludedcards.amulet.checked){
+                        removeA(cards,"amulet");
+                        console.log(cards);
+                    }
+                    if (excludedcards.artificer.checked){
+                        removeA(cards,"artificer");
+                        console.log(cards);
+                    }
+                    if (excludedcards.bridgetroll.checked){
+                        removeA(cards,"bridgetroll");
+                        console.log(cards);
+                    }
+                    if (excludedcards.caravanguard.checked){
+                        removeA(cards,"caravanguard");
+                        console.log(cards);
+                    }
+                    if (excludedcards.coinoftherealm.checked){
+                        removeA(cards,"coinoftherealm");
+                        console.log(cards);
+                    }
+                    if (excludedcards.distantlands.checked){
+                        removeA(cards,"distantlands");
+                        console.log(cards);
+                    }
+                    if (excludedcards.dungeon.checked){
+                        removeA(cards,"dungeon");
+                        console.log(cards);
+                    }
+                    if (excludedcards.duplicate.checked){
+                        removeA(cards,"duplicate");
+                        console.log(cards);
+                    }
+                    if (excludedcards.gear.checked){
+                        removeA(cards,"gear");
+                        console.log(cards);
+                    }
+                    if (excludedcards.giant.checked){
+                        removeA(cards,"giant");
+                        console.log(cards);
+                    }
+                    if (excludedcards.guide.checked){
+                        removeA(cards,"guide");
+                        console.log(cards);
+                    }
+                    if (excludedcards.hauntedwoods.checked){
+                        removeA(cards,"hauntedwoods");
+                        console.log(cards);
+                    }
+                    if (excludedcards.hireling.checked){
+                        removeA(cards,"hireling");
+                        console.log(cards);
+                    }
+                    if (excludedcards.lostcity.checked){
+                        removeA(cards,"lostcity");
+                        console.log(cards);
+                    }
+                    if (excludedcards.magpie.checked){
+                        removeA(cards,"magpie");
+                        console.log(cards);
+                    }
+                    if (excludedcards.messenger.checked){
+                        removeA(cards,"messenger");
+                        console.log(cards);
+                    }
+                    if (excludedcards.miser.checked){
+                        removeA(cards,"miser");
+                        console.log(cards);
+                    }
+                    if (excludedcards.page.checked){
+                        removeA(cards,"page");
+                        console.log(cards);
+                    }
+                    if (excludedcards.peasant.checked){
+                        removeA(cards,"port");
+                        console.log(cards);
+                    }
+                    if (excludedcards.ranger.checked){
+                        removeA(cards,"ranger");
+                        console.log(cards);
+                    }
+                    if (excludedcards.ratcatcher.checked){
+                        removeA(cards,"ratcatcher");
+                        console.log(cards);
+                    }
+                    if (excludedcards.raze.checked){
+                        removeA(cards,"raze");
+                        console.log(cards);
+                    }
+                    if (excludedcards.relic.checked){
+                        removeA(cards,"relic");
+                        console.log(cards);
+                    }
+                    if (excludedcards.royalcarriage.checked){
+                        removeA(cards,"royalcarriage");
+                        console.log(cards);
+                    }
+                    if (excludedcards.storyteller.checked){
+                        removeA(cards,"storyteller");
+                        console.log(cards);
+                    }
+                    if (excludedcards.swamphag.checked){
+                        removeA(cards,"swamphag");
+                        console.log(cards);
+                    }
+                    if (excludedcards.transmogrify.checked){
+                        removeA(cards,"transmogrify");
+                        console.log(cards);
+                    }
+                    if (excludedcards.treasuretrove.checked){
+                        removeA(cards,"treasuretrove");
+                        console.log(cards);
+                    }
+                    if (excludedcards.winemerchant.checked){
+                        removeA(cards,"winemerchant");
+                        console.log(cards);
+                    }
+                }
                 /*
                 for future sets:
                 if (setlist.indexOf("")!=-1){
@@ -1734,6 +1852,39 @@
                     <input type="checkbox" name="soothsayer" value="exclude">Soothsayer<br>
                     <input type="checkbox" name="stonemason" value="exclude">Stonemason<br>
                     <input type="checkbox" name="taxman" value="exclude">Taxman<br>
+                </div>
+                <div id="adventures-cards-to-exclude" style="display: none;">
+                    <h2>Adventures</h2>
+                    <input type="checkbox" name="amulet" value="exclude">Amulet<br>
+                    <input type="checkbox" name="artificer" value="exclude">Artificer<br>
+                    <input type="checkbox" name="bridgetroll" value="exclude">Bridge Troll<br>
+                    <input type="checkbox" name="caravanguard" value="exclude">Caravan Guard<br>
+                    <input type="checkbox" name="coinoftherealm" value="exclude">Coin of the Realm<br>
+                    <input type="checkbox" name="distantlands" value="exclude">Distant Lands<br>
+                    <input type="checkbox" name="dungeon" value="exclude">Dungeon<br>
+                    <input type="checkbox" name="duplicate" value="exclude">Duplicate<br>
+                    <input type="checkbox" name="gear" value="exclude">Gear<br>
+                    <input type="checkbox" name="giant" value="exclude">Giant<br>
+                    <input type="checkbox" name="guide" value="exclude">Guide<br>
+                    <input type="checkbox" name="hauntedwoods" value="exclude">Haunted Woods<br>
+                    <input type="checkbox" name="hireling" value="exclude">Hireling<br>
+                    <input type="checkbox" name="lostcity" value="exclude">Lost City<br>
+                    <input type="checkbox" name="magpie" value="exclude">Magpie<br>
+                    <input type="checkbox" name="messenger" value="exclude">Messenger<br>
+                    <input type="checkbox" name="miser" value="exclude">Miser<br>
+                    <input type="checkbox" name="page" value="exclude">Page<br>
+                    <input type="checkbox" name="peasant" value="exclude">Peasant<br>
+                    <input type="checkbox" name="port" value="exclude">Port<br>
+                    <input type="checkbox" name="ranger" value="exclude">Ranger<br>
+                    <input type="checkbox" name="ratcatcher" value="exclude">Rat Catcher<br>
+                    <input type="checkbox" name="raze" value="exclude">Raze<br>
+                    <input type="checkbox" name="relic" value="exclude">Relic<br>
+                    <input type="checkbox" name="royalcarriage" value="exclude">Royal Carriage<br>
+                    <input type="checkbox" name="storyteller" value="exclude">Story Teller<br>
+                    <input type="checkbox" name="swamphag" value="exclude">Swamp Hag<br>
+                    <input type="checkbox" name="transmogrify" value="exclude">Transmogrify<br>
+                    <input type="checkbox" name="treasuretrove" value="exclude">Treasure Trove<br>
+                    <input type="checkbox" name="winemerchant" value="exclude">Wine Merchant<br>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
