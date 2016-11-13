@@ -1525,6 +1525,124 @@
                         console.log(cards);
                     }
                 }
+                if (setlist.indexOf("empires")!=-1){
+                    if (excludedcards.archive.checked){
+                        removeA(cards,"archive");
+                        console.log(cards);
+                    }
+                    if (excludedcards.bustlingvillage.checked){
+                        removeA(cards,"bustlingvillage");
+                        console.log(cards);
+                    }
+                    if (excludedcards.capital.checked){
+                        removeA(cards,"capital");
+                        console.log(cards);
+                    }
+                    if (excludedcards.castles.checked){
+                        removeA(cards,"castles");
+                        console.log(cards);
+                    }
+                    if (excludedcards.catapult.checked){
+                        removeA(cards,"catapult");
+                        console.log(cards);
+                    }
+                    if (excludedcards.chariotrace.checked){
+                        removeA(cards,"chariotrace");
+                        console.log(cards);
+                    }
+                    if (excludedcards.charm.checked){
+                        removeA(cards,"charm");
+                        console.log(cards);
+                    }
+                    if (excludedcards.cityquarter.checked){
+                        removeA(cards,"cityquarter");
+                        console.log(cards);
+                    }
+                    if (excludedcards.crown.checked){
+                        removeA(cards,"crown");
+                        console.log(cards);
+                    }
+                    if (excludedcards.emporium.checked){
+                        removeA(cards,"emporium");
+                        console.log(cards);
+                    }
+                    if (excludedcards.encampment.checked){
+                        removeA(cards,"encampment");
+                        console.log(cards);
+                    }
+                    if (excludedcards.enchantress.checked){
+                        removeA(cards,"enchantress");
+                        console.log(cards);
+                    }
+                    if (excludedcards.engineer.checked){
+                        removeA(cards,"engineer");
+                        console.log(cards);
+                    }
+                    if (excludedcards.farmersmarket.checked){
+                        removeA(cards,"farmersmarket");
+                        console.log(cards);
+                    }
+                    if (excludedcards.fortunee.checked){
+                        removeA(cards,"fortune");
+                        console.log(cards);
+                    }
+                    if (excludedcards.forum.checked){
+                        removeA(cards,"forum");
+                        console.log(cards);
+                    }
+                    if (excludedcards.gladiator.checked){
+                        removeA(cards,"gladiator");
+                        console.log(cards);
+                    }
+                    if (excludedcards.groundskeeper.checked){
+                        removeA(cards,"groundskeeper");
+                        console.log(cards);
+                    }
+                    if (excludedcards.legionary.checked){
+                        removeA(cards,"legionary");
+                        console.log(cards);
+                    }
+                    if (excludedcards.overlord.checked){
+                        removeA(cards,"overlord");
+                        console.log(cards);
+                    }
+                    if (excludedcards.patrician.checked){
+                        removeA(cards,"patrician");
+                        console.log(cards);
+                    }
+                    if (excludedcards.plunder.checked){
+                        removeA(cards,"plunder");
+                        console.log(cards);
+                    }
+                    if (excludedcards.rocks.checked){
+                        removeA(cards,"rocks");
+                        console.log(cards);
+                    }
+                    if (excludedcards.royalblacksmith.checked){
+                        removeA(cards,"royalblacksmith");
+                        console.log(cards);
+                    }
+                    if (excludedcards.sacrifice.checked){
+                        removeA(cards,"sacrifice");
+                        console.log(cards);
+                    }
+                    if (excludedcards.settlers.checked){
+                        removeA(cards,"settlers");
+                        console.log(cards);
+                    }
+                    if (excludedcards.temple.checked){
+                        removeA(cards,"temple");
+                        console.log(cards);
+                    }
+                    if (excludedcards.villa.checked){
+                        removeA(cards,"villa");
+                        console.log(cards);
+                    }
+                    if (excludedcards.wildhunt.checked){
+                        removeA(cards,"wildhunt");
+                        console.log(cards);
+                    }
+                }
                 /*
                 for future sets:
                 if (setlist.indexOf("")!=-1){
@@ -1885,6 +2003,38 @@
                     <input type="checkbox" name="transmogrify" value="exclude">Transmogrify<br>
                     <input type="checkbox" name="treasuretrove" value="exclude">Treasure Trove<br>
                     <input type="checkbox" name="winemerchant" value="exclude">Wine Merchant<br>
+                </div>
+                <div id="empires-cards-to-exclude" style="display: none;">
+                    <h2>Empires</h2>
+                    <input type="checkbox" name="archive" value="exclude">Archive<br>
+                    <input type="checkbox" name="bustlingvillage" value="exclude">Bustling Village<br>
+                    <input type="checkbox" name="capital" value="exclude">Capital<br>
+                    <input type="checkbox" name="castles" value="exclude">Castles<br>
+                    <input type="checkbox" name="catapult" value="exclude">Catapult<br>
+                    <input type="checkbox" name="chariotrace" value="exclude">Chariot Race<br>
+                    <input type="checkbox" name="charm" value="exclude">Charm<br>
+                    <input type="checkbox" name="cityquarter" value="exclude">City Quarter<br>
+                    <input type="checkbox" name="crown" value="exclude">Crown<br>
+                    <input type="checkbox" name="emporium" value="exclude">Emporium<br>
+                    <input type="checkbox" name="encampment" value="exclude">Encampment<br>
+                    <input type="checkbox" name="enchantress" value="exclude">Enchantress<br>
+                    <input type="checkbox" name="engineer" value="exclude">Engineer<br>
+                    <input type="checkbox" name="farmersmarket" value="exclude">Farmers Market<br>
+                    <input type="checkbox" name="fortune" value="exclude">Fortune<br>
+                    <input type="checkbox" name="forum" value="exclude">Forum<br>
+                    <input type="checkbox" name="gladiator" value="exclude">Gladiator<br>
+                    <input type="checkbox" name="groundskeeper" value="exclude">Grounds Keeper<br>
+                    <input type="checkbox" name="legionary" value="exclude">Legionary<br>
+                    <input type="checkbox" name="overlord" value="exclude">Overlord<br>
+                    <input type="checkbox" name="patrician" value="exclude">Patrician<br>
+                    <input type="checkbox" name="plunder" value="exclude">Plunder<br>
+                    <input type="checkbox" name="rocks" value="exclude">Rocks<br>
+                    <input type="checkbox" name="royalblacksmith" value="exclude">Royal Blacksmith<br>
+                    <input type="checkbox" name="sacrifice" value="exclude">Sacrifice<br>
+                    <input type="checkbox" name="settlers" value="exclude">Settlers<br>
+                    <input type="checkbox" name="temple" value="exclude">Temple<br>
+                    <input type="checkbox" name="villa" value="exclude">Villa<br>
+                    <input type="checkbox" name="wildhunt" value="exclude">Wild Hunt<br>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
