@@ -3,6 +3,7 @@
     <head>
         <title>Dominion Black Market Card Selector</title>
         <script src="jquery.min.js"></script>
+        <link href="w3.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <script>
@@ -690,7 +691,7 @@
                         cards.push("walledvillage");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
-                        document.getElementById("walledvillage-cards-to-exclude").style.display = "inline";
+                        document.getElementById("walledvilage-cards-to-exclude").style.display = "inline";
                     }
                     if (setlist.indexOf("governor")!=-1){
                         cards.push("governor");
@@ -1190,7 +1191,7 @@
                         removeA(cards,"vault");
                         console.log(cards);
                     }
-                    if (excludedcards.ventuere.checked){
+                    if (excludedcards.venture.checked){
                         removeA(cards,"venture");
                         console.log(cards);
                     }
@@ -1592,7 +1593,7 @@
                         removeA(cards,"farmersmarket");
                         console.log(cards);
                     }
-                    if (excludedcards.fortunee.checked){
+                    if (excludedcards.fortune.checked){
                         removeA(cards,"fortune");
                         console.log(cards);
                     }
@@ -1758,25 +1759,27 @@
         <div id="choose_sets">
             <h1>Select the sets you want, and click Generate Deck.</h1>
             <form name="sets" action="" method="get">
-            <input class="dominion_sets" type="checkbox" name="base" value="Base">Base Set<br>
-            <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
-            <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
-            <input class="dominion_sets" type="checkbox" name="alchemy" value="Alchemy">Alchemy<br>
-            <input class="dominion_sets" type="checkbox" name="prosperity" value="Prosperity">Prosperity<br>
-            <input class="dominion_sets" type="checkbox" name="cornucopia" value="Cornucopia">Cornucopia<br>
-            <input class="dominion_sets" type="checkbox" name="hinterlands" value="Hinterlands">Hinterlands<br>
-            <input class="dominion_sets" type="checkbox" name="dark" value="Dark">Dark Ages<br>
-            <input class="dominion_sets" type="checkbox" name="guilds" value="Guilds">Guilds<br>
-            <input class="dominion_sets" type="checkbox" name="adventures" value="Adventures">Adventures<br>
-            <input class="dominion_sets" type="checkbox" name="empires" value="Empires">Empires<br>
-            <input class="dominion_sets" type="checkbox" name="envoy" value="Envoy">Envoy<br>
-            <input class="dominion_sets" type="checkbox" name="walled" value="Walled">Walled Village<br>
-            <input class="dominion_sets" type="checkbox" name="governor" value="Governor">Governor<br>
-            <input class="dominion_sets" type="checkbox" name="stash" value="Stash">Stash<br>
-            <input class="dominion_sets" type="checkbox" name="prince" value="Prince">Prince<br>
-            <input type="button" name="all" value="Select All" onclick="checkAll('sets',true);">
-            <input type="button" name="all" value="Unselect All" onclick="checkAll('sets',false);"><br>
-            <button type="button" onclick="generate()">Generate Deck</button>
+                <input class="dominion_sets" type="checkbox" name="base" value="Base">Base Set<br>
+                <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
+                <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
+                <input class="dominion_sets" type="checkbox" name="alchemy" value="Alchemy">Alchemy<br>
+                <input class="dominion_sets" type="checkbox" name="prosperity" value="Prosperity">Prosperity<br>
+                <input class="dominion_sets" type="checkbox" name="cornucopia" value="Cornucopia">Cornucopia<br>
+                <input class="dominion_sets" type="checkbox" name="hinterlands" value="Hinterlands">Hinterlands<br>
+                <input class="dominion_sets" type="checkbox" name="dark" value="Dark">Dark Ages<br>
+                <input class="dominion_sets" type="checkbox" name="guilds" value="Guilds">Guilds<br>
+                <input class="dominion_sets" type="checkbox" name="adventures" value="Adventures">Adventures<br>
+                <input class="dominion_sets" type="checkbox" name="empires" value="Empires">Empires<br>
+                <input class="dominion_sets" type="checkbox" name="envoy" value="Envoy">Envoy<br>
+                <input class="dominion_sets" type="checkbox" name="walled" value="Walled">Walled Village<br>
+                <input class="dominion_sets" type="checkbox" name="governor" value="Governor">Governor<br>
+                <input class="dominion_sets" type="checkbox" name="stash" value="Stash">Stash<br>
+                <input class="dominion_sets" type="checkbox" name="prince" value="Prince">Prince<br>
+                <div class="w3-btn-group">
+                    <input type="button" name="all" value="Select All" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="checkAll('sets',true);">
+                    <input type="button" name="all" value="Unselect All" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="checkAll('sets',false);">
+                    <button type="button" onclick="generate()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Generate Deck</button>
+                </div>
         </form>
         </div>
         <div id="cards_to_exclude" style="display: none;">
@@ -2090,7 +2093,7 @@
                     <input type="checkbox" name="" value="exclude"><br>
                 </div>
                 -->
-                <button type="button" onclick="exclude_cards()">Continue</button>
+                <button type="button" onclick="exclude_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Continue</button>
             </form>
         </div>
         <div id="deck_select" style="display:none;">
@@ -2101,18 +2104,20 @@
                 <span id="card_1"></span>
                 <span id="card_2"></span>
                 <span id="card_3"></span>
-                <button id="buynone" type="button" onclick="discardall()">Discard All</button>
-                <button id="buy1" type="button" onclick="buy(1)">
-                    Buy card <span id="card_1_name"></span>
-                </button>
-                <button id="buy2" type="button" onclick="buy(2)">
-                    Buy card <span id="card_2_name"></span>
-                </button>
-                <button id="buy3" type="button" onclick="buy(3)">
-                    Buy card <span id="card_3_name"></span>
-                </button>
+                <div class="w3-btn-group">
+                    <button id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
+                    <button id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                        Buy card <span id="card_1_name"></span>
+                    </button>
+                    <button id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                        Buy card <span id="card_2_name"></span>
+                    </button>
+                    <button id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                        Buy card <span id="card_3_name"></span>
+                    </button>
+                </div>
             </div>
-            <button id="draw_button" type="button" onclick="draw_cards()">
+            <button id="draw_button" type="button" onclick="draw_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                 Draw Cards
             </button>
         </div>
