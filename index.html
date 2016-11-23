@@ -51,6 +51,8 @@
                 buy_card_3=document.getElementById("buy3");
                 buy_none=document.getElementById("buynone");
                 draw_button=document.getElementById("draw_button");
+                cardsleft=document.getElementById("cards_left_h1");
+                promolist=[];
             }
             function removeA(arr) {
                 var what, a = arguments, L = a.length, ax;
@@ -109,23 +111,23 @@
                 }
                 if (sets.envoy.checked){
                     console.log("Adding envoy");
-                    setlist.push("envoy");
+                    promolist.push("envoy");
                 }
                 if (sets.walled.checked){
                     console.log("Adding walled (village)");
-                    setlist.push("walled");
+                    promolist.push("walled");
                 }
                 if (sets.governor.checked){
                     console.log("Adding governor");
-                    setlist.push("governor");
+                    promolist.push("governor");
                 }
                 if (sets.stash.checked){
                     console.log("Adding stash");
-                    setlist.push("stash");
+                    promolist.push("stash");
                 }
                 if (sets.prince.checked){
                     console.log("Adding prince");
-                    setlist.push("prince");
+                    promolist.push("prince");
                 }
                 if (setlist.length < 1){
                     alert("Please pick at least one set!");
@@ -681,31 +683,31 @@
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("empires-cards-to-exclude").style.display = "inline";
                     }
-                    if (setlist.indexOf("envoy")!=-1){
+                    if (promolist.indexOf("envoy")!=-1){
                         cards.push("envoy");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
                         document.getElementById("envoy-cards-to-exclude").style.display = "inline";
                     }
-                    if (setlist.indexOf("walled")!=-1){
+                    if (promolist.indexOf("walled")!=-1){
                         cards.push("walledvillage");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
                         document.getElementById("walledvilage-cards-to-exclude").style.display = "inline";
                     }
-                    if (setlist.indexOf("governor")!=-1){
+                    if (promolist.indexOf("governor")!=-1){
                         cards.push("governor");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
                         document.getElementById("governor-cards-to-exclude").style.display = "inline";
                     }
-                    if (setlist.indexOf("stash")!=-1){
+                    if (promolist.indexOf("stash")!=-1){
                         cards.push("stash");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
                         document.getElementById("stash-cards-to-exclude").style.display = "inline";
                     }
-                    if (setlist.indexOf("prince")!=-1){
+                    if (promolist.indexOf("prince")!=-1){
                         cards.push("prince");
                         console.log("added card " + cards[cards.length - 1]);
                         document.getElementById("promo-cards-to-exclude").style.display = "inline";
@@ -1654,31 +1656,31 @@
                         console.log(cards);
                     }
                 }
-                if (setlist.indexOf("envoy")!=-1){
+                if (promolist.indexOf("envoy")!=-1){
                     if (excludedcards.envoy.checked){
                         removeA(cards,"envoy");
                         console.log(cards);
                     }
                 }
-                if (setlist.indexOf("governor")!=-1){
+                if (promolist.indexOf("governor")!=-1){
                     if (excludedcards.governor.checked){
                         removeA(cards,"governor");
                         console.log(cards);
                     }
                 }
-                if (setlist.indexOf("prince")!=-1){
+                if (promolist.indexOf("prince")!=-1){
                     if (excludedcards.prince.checked){
                         removeA(cards,"prince");
                         console.log(cards);
                     }
                 }
-                if (setlist.indexOf("stash")!=-1){
+                if (promolist.indexOf("stash")!=-1){
                     if (excludedcards.stash.checked){
                         removeA(cards,"stash");
                         console.log(cards);
                     }
                 }
-                if (setlist.indexOf("walled")!=-1){
+                if (promolist.indexOf("walled")!=-1){
                     if (excludedcards.walledvillage.checked){
                         removeA(cards,"walledvillage");
                         console.log(cards);
@@ -1698,32 +1700,76 @@
                 document.getElementById("deck_select").style.display = "block";
             }
             function draw_cards(){
-                console.log(cards);
-                random_card1 = cards[0];
-                removeA(cards,random_card1);
-                random_card2 = cards[0];
-                removeA(cards,random_card2);
-                random_card3 = cards[0];
-                removeA(cards,random_card3);
-                card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
-                card_2_image.innerHTML = "<img src='images/all/" + random_card2 + ".jpg'>";
-                card_3_image.innerHTML = "<img src='images/all/" + random_card3 + ".jpg'>";
-                card_1_span.innerHTML = random_card1;//should eventually draw from dictionary for CORRECT name(with spaces and caps)
-                card_2_span.innerHTML = random_card2;
-                card_3_span.innerHTML = random_card3;
-                draw_button.style.display = "none";
-                card_1_image.style.display = "inline";
-                card_2_image.style.display = "inline";
-                card_3_image.style.display = "inline";
-                buy_card_1.style.display = "inline";
-                buy_card_2.style.display = "inline";
-                buy_card_3.style.display = "inline";
-                buy_none.style.display = "inline";
+                cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
+                if (cards.length > 2){
+                    console.log(cards);
+                    random_card1 = cards[0];
+                    removeA(cards,random_card1);
+                    random_card2 = cards[0];
+                    removeA(cards,random_card2);
+                    random_card3 = cards[0];
+                    removeA(cards,random_card3);
+                    card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
+                    card_2_image.innerHTML = "<img src='images/all/" + random_card2 + ".jpg'>";
+                    card_3_image.innerHTML = "<img src='images/all/" + random_card3 + ".jpg'>";
+                    card_1_span.innerHTML = random_card1;//should eventually draw from dictionary for CORRECT name(with spaces and caps)
+                    card_2_span.innerHTML = random_card2;
+                    card_3_span.innerHTML = random_card3;
+                    draw_button.style.display = "none";
+                    card_1_image.style.display = "inline";
+                    card_2_image.style.display = "inline";
+                    card_3_image.style.display = "inline";
+                    buy_card_1.style.display = "inline";
+                    buy_card_2.style.display = "inline";
+                    buy_card_3.style.display = "inline";
+                    buy_none.style.display = "inline";
+                }
+                else if (cards.length == 2){
+                    console.log(cards);
+                    random_card1 = cards[0];
+                    removeA(cards,random_card1);
+                    random_card2 = cards[0];
+                    removeA(cards,random_card2);
+                    random_card3 = false;
+                    card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
+                    card_2_image.innerHTML = "<img src='images/all/" + random_card2 + ".jpg'>";
+                    card_1_span.innerHTML = random_card1;//should eventually draw from dictionary for CORRECT name(with spaces and caps)
+                    card_2_span.innerHTML = random_card2;
+                    draw_button.style.display = "none";
+                    card_1_image.style.display = "inline";
+                    card_2_image.style.display = "inline";
+                    buy_card_1.style.display = "inline";
+                    buy_card_2.style.display = "inline";
+                    buy_none.style.display = "inline";
+                }
+                else if (cards.length == 1){
+                    console.log(cards);
+                    random_card1 = cards[0];
+                    random_card2 = false;
+                    random_card3 = false;
+                    removeA(cards,random_card1);
+                    card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
+                    card_1_span.innerHTML = random_card1;//should eventually draw from dictionary for CORRECT name(with spaces and caps)
+                    draw_button.style.display = "none";
+                    card_1_image.style.display = "inline";
+                    buy_card_1.style.display = "inline";
+                    buy_none.style.display = "inline";
+                }
+                else{
+                    document.getElementById("deck_select").style.display = "none";
+                    document.getElementById("done").style.display = "block";
+                }
             }
             function discardall(){
-                cards.push(random_card1);
-                cards.push(random_card2);
-                cards.push(random_card3);
+                if (random_card1){
+                    cards.push(random_card1);
+                }
+                if (random_card2){
+                    cards.push(random_card2);
+                }
+                if (random_card3){
+                    cards.push(random_card3);
+                }
                 draw_button.style.display = "inline";
                 card_1_image.style.display = "none";
                 card_2_image.style.display = "none";
@@ -1732,15 +1778,22 @@
                 buy_card_2.style.display = "none";
                 buy_card_3.style.display = "none";
                 buy_none.style.display = "none";
+                cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
             }
             function buy(card_to_buy){
                 if (card_to_buy==1){
-                    cards.push(random_card2);
-                    cards.push(random_card3);
+                    if (random_card2){
+                        cards.push(random_card2);
+                    }
+                    if (random_card3){
+                        cards.push(random_card3);
+                    }
                 }
                 else if (card_to_buy==2){
                     cards.push(random_card1);
-                    cards.push(random_card3);
+                    if (random_card3){
+                        cards.push(random_card3);
+                    }
                 }
                 else if (card_to_buy==3){
                     cards.push(random_card1);
@@ -1754,6 +1807,7 @@
                 buy_card_2.style.display = "none";
                 buy_card_3.style.display = "none";
                 buy_none.style.display = "none";
+                cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
             }
         </script>
         <div id="choose_sets">
@@ -1784,7 +1838,7 @@
         </div>
         <div id="cards_to_exclude" style="display: none;">
             <h1>
-                Which cards do you NOT want in the black market deck(already in game, or you just don't like)
+                Which cards do you NOT want in the black market deck(already in game)
             </h1>
             <form id="form-cards-to-exclude" name="excludedcards" action="" method="get">
                 <div id="base-cards-to-exclude" style="display: none;">
@@ -2081,11 +2135,11 @@
                 </div>
                 <div id="promo-cards-to-exclude" style="display: none;">
                     <h2>Promo Cards</h2>
-                    <input type="checkbox" id="envoy-cards-to-exclude" name="envoy" value="exclude">Envoy<br>
-                    <input type="checkbox" id="governor-cards-to-exclude" name="governor" value="exclude">Governor<br>
-                    <input type="checkbox" id="prince-cards-to-exclude" name="prince" value="exclude">Prince<br>
-                    <input type="checkbox" id="stash-cards-to-exclude" name="stash" value="exclude">Stash<br>
-                    <input type="checkbox" id="walledvilage-cards-to-exclude" name="walledvillage" value="exclude">Walled Village<br>
+                    <span style="display: none;" id="envoy-cards-to-exclude"><input type="checkbox" id="envoy-cards-to-exclude" name="envoy" value="exclude">Envoy<br></span>
+                    <span style="display: none;" id="governor-cards-to-exclude"><input type="checkbox" id="governor-cards-to-exclude" name="governor" value="exclude">Governor<br></span>
+                    <span style="display: none;" id="prince-cards-to-exclude"><input type="checkbox" id="prince-cards-to-exclude" name="prince" value="exclude">Prince<br></span>
+                    <span style="display: none;" id="stash-cards-to-exclude"><input type="checkbox" id="stash-cards-to-exclude" name="stash" value="exclude">Stash<br></span>
+                    <span style="display: none;" id="walledvilage-cards-to-exclude"><input type="checkbox" id="walledvilage-cards-to-exclude" name="walledvillage" value="exclude">Walled Village<br></span>
                 </div>
                 <!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">
@@ -2097,7 +2151,7 @@
             </form>
         </div>
         <div id="deck_select" style="display:none;">
-            <h1>
+            <h1 id="cards_left_h1">
                 Your deck has been completed
             </h1>
             <div id="cards_selected">
@@ -2105,20 +2159,29 @@
                 <span id="card_2"></span>
                 <span id="card_3"></span>
                 <div class="w3-btn-group">
-                    <button id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
-                    <button id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                    <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
+                    <button style="display: none;" id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                         Buy card <span id="card_1_name"></span>
                     </button>
-                    <button id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                    <button style="display: none;" id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                         Buy card <span id="card_2_name"></span>
                     </button>
-                    <button id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                    <button style="display: none;" id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                         Buy card <span id="card_3_name"></span>
                     </button>
                 </div>
             </div>
             <button id="draw_button" type="button" onclick="draw_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                 Draw Cards
+            </button>
+        </div>
+        <div id="done" style="display: none;">
+            <h1>
+                The Black Market Deck is Empty!
+            </h1>
+            <br>
+            <button onclick="location='';" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                Make another deck
             </button>
         </div>
     </body>
