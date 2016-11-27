@@ -2199,6 +2199,23 @@
                     }
                 </script>
                 <div id="cardmenu">
+                    <!--non dextop version:-->
+                    <div id="cards_selected">
+                        <span id="card_1_image"></span>
+                        <span id="card_2_image"></span>
+                        <span id="card_3_image"></span>
+                        <div class="w3-btn-group">
+                            <button style="display: none;" id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                                Buy card <span id="card_1_name"></span>
+                            </button>
+                            <button style="display: none;" id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                                Buy card <span id="card_2_name"></span>
+                            </button>
+                            <button style="display: none;" id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                                Buy card <span id="card_3_name"></span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="w3-btn-group">
                     <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
