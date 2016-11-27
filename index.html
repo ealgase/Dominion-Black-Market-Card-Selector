@@ -41,9 +41,11 @@
                 return array;
             }
             window.onload = function(){
-                card_1_image=document.getElementById("card_1");
-                card_2_image=document.getElementById("card_2");
-                card_3_image=document.getElementById("card_3");
+                cardmenuobject=document.getElementById("cardmenu");
+                loadtable();
+                card_1_image=document.getElementById("card_1_image");
+                card_2_image=document.getElementById("card_2_image");
+                card_3_image=document.getElementById("card_3_image");
                 card_1_span=document.getElementById("card_1_name");
                 card_2_span=document.getElementById("card_2_name");
                 card_3_span=document.getElementById("card_3_name");
@@ -54,6 +56,7 @@
                 draw_button=document.getElementById("draw_button");
                 cardsleft=document.getElementById("cards_left_h1");
                 promolist=[];
+                console.log(navigator.userAgent);
             }
             function removeA(arr) {
                 var what, a = arguments, L = a.length, ax;
@@ -2156,20 +2159,50 @@
                 Your deck has been completed
             </h1>
             <div id="cards_selected">
-                <span id="card_1"></span>
-                <span id="card_2"></span>
-                <span id="card_3"></span>
+                <script>
+                    function loadtable(){
+                        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
+                            console.log("good youre on dextop");
+                            cardmenuobject.innerHTML = `
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id=\"card_1_image\"></span>
+                                            <br>
+                                            <button style=\"display: none;\" id=\"buy1\" type=\"button\" onclick=\"buy(1)\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">
+                                                Buy card 
+                                                <span id=\"card_1_name\">
+                                                </span>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <span id=\"card_2_image\"></span>
+                                            <br>
+                                            <button style=\"display: none;\" id=\"buy2\" type=\"button\" onclick=\"buy(2)\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">
+                                                Buy card 
+                                                <span id=\"card_2_name\">
+                                                </span>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <span id=\"card_3_image\"></span>
+                                            <br>
+                                            <button style=\"display: none;\" id=\"buy3\" type=\"button\" onclick=\"buy(3)\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">
+                                                Buy card 
+                                                <span id=\"card_3_name\">
+                                                </span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            `
+                        }
+                    }
+                </script>
+                <div id="cardmenu">
+                </div>
                 <div class="w3-btn-group">
                     <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
-                    <button style="display: none;" id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                        Buy card <span id="card_1_name"></span>
-                    </button>
-                    <button style="display: none;" id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                        Buy card <span id="card_2_name"></span>
-                    </button>
-                    <button style="display: none;" id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                        Buy card <span id="card_3_name"></span>
-                    </button>
                 </div>
             </div>
             <button id="draw_button" type="button" onclick="draw_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
