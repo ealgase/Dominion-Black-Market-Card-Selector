@@ -276,6 +276,7 @@ function checkAll(formname, checktoggle) {
     }
 }
 var setlist = [];
+var promolist = [];
 var cards = [];
 var random_card1;
 var random_card2;
@@ -301,7 +302,7 @@ function shuffle(array) {
 function loadtable() {
     "use strict";
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
-        var cardmenuobject;
+        var cardmenuobject = document.getElementById("cardmenu");
         cardmenuobject.innerHTML = `
             <table>
                 <tr>
@@ -338,7 +339,6 @@ function loadtable() {
     }
 }
 window.onload = function () {
-    "use strict";
     cardmenuobject = document.getElementById("cardmenu");
     loadtable();
     card_1_image=document.getElementById("card_1_image");
@@ -353,7 +353,6 @@ window.onload = function () {
     buy_none=document.getElementById("buynone");
     draw_button=document.getElementById("draw_button");
     cardsleft=document.getElementById("cards_left_h1");
-    promolist=[];
 }
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
@@ -1999,6 +1998,16 @@ function exclude_cards(){
     cards=shuffle(cards);
     document.getElementById("cards_to_exclude").style.display = "none";
     document.getElementById("deck_select").style.display = "block";
+    var rememberto = 0, remembertodiv = document.getElementById("rememberto"), topoflist = document.getElementById("topoflist"), alchemypotionremember = document.getElementById("alcpotrem");
+    if (setlist.indexOf("alchemy")!=-1){
+        rememberto=1;
+    }
+    if (!rememberto==1){
+        topoflist.style.display = "none";
+    }
+    if (setlist.indexOf("alchemy")==-1){
+        alchemypotionremember.style.display = "none";
+    }
 }
 function draw_cards(){
     cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
