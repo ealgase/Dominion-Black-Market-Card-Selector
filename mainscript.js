@@ -23,7 +23,8 @@ var carddict = {
     "bridge": "Bridge",
     "bridgetroll": "Bridge Troll",
     "bureaucrat": "Bureaucrat",
-    "bustlingvillage": "Bustling Village",
+    //bustling village sits under settlers, so it can't get picked
+    //"bustlingvillage": "Bustling Village",
     "butcher": "Butcher",
     "cache": "Cache",
     "candlestickmaker": "Candlestick Maker",
@@ -925,7 +926,8 @@ function generate(){
         if (setlist.indexOf("empires")!=-1){
             cards.push("archive");
             console.log("added card " + cards[cards.length - 1]);
-            cards.push("bustlingvillage");
+            //see description in card dictionary
+            //cards.push("bustlingvillage");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("capital");
             console.log("added card " + cards[cards.length - 1]);
@@ -1998,7 +2000,7 @@ function exclude_cards(){
     cards=shuffle(cards);
     document.getElementById("cards_to_exclude").style.display = "none";
     document.getElementById("deck_select").style.display = "block";
-    var rememberto = 0, remembertodiv = document.getElementById("rememberto"), topoflist = document.getElementById("topoflist"), alchemypotionremember = document.getElementById("alcpotrem");
+    var rememberto = 0, remembertodiv = document.getElementById("rememberto"), topoflist = document.getElementById("topoflist"), alchemypotionremember = document.getElementById("alcpotrem"), coinrem = document.getElementById("coinrem"), spoilsreminder = document.getElementById("spoilsrem"), vicreminder = document.getElementById("vicrem"), minus1coinrem = document.getElementById("m1crem"), debtrem = document.getElementById("debtrem");
     if (setlist.indexOf("alchemy")!=-1){
         rememberto=1;
     }
@@ -2008,6 +2010,21 @@ function exclude_cards(){
     if (setlist.indexOf("alchemy")==-1){
         alchemypotionremember.style.display = "none";
     }
+    if (((cards.indexOf("candlestickmaker")==-1) and (cards.indexOf("")==-1)) and ((cards.indexOf("baker")==-1) and (cards.indexOf("butcher")==-1))){
+        coinrem.style.display = "none";
+    }
+    if (cards.indexOf("banditcamp")==-1){
+        spoilsreminder.style.display = "none";
+    }
+    if ((cards.indexOf("bishop")==-1) or (cards.indexOf("chariotrace")==-1)){
+        vicreminder.style.display = "none";
+    }
+    if (cards.indexOf("bridgetroll")==-1){
+        minus1coinrem.style.display = "none";
+    }
+    if (cards.indexOf("capital")==-1){
+        debtrem.style.display = "none";
+    }//checked up until cityquarter, need to add it to debt reminder and continue from there
 }
 function draw_cards(){
     cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
