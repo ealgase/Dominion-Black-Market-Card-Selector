@@ -65,7 +65,7 @@ var carddict = {
     "duplicate": "Duplicate",
     "embargo": "Embargo",
     "embassy": "Embassy",
-    "emporium": "Emporium",
+    //"emporium": "Emporium",
     "encampment": "Encampment",
     "enchantress": "Enchantress",
     "engineer": "Engineer",
@@ -85,7 +85,7 @@ var carddict = {
     "forager": "Forager",
     "forge": "Forge",
     "fortress": "Fortress",
-    "fortune": "Fortune",
+//    "fortune": "Fortune",
     "fortuneteller": "Fortune Teller",
     "forum": "Forum",
     "gardens": "Gardens",
@@ -177,7 +177,8 @@ var carddict = {
     "pillage": "Pillage",
     "pirateship": "Pirate Ship",
     "plaza": "Plaza",
-    "plunder": "Plunder",
+    //ugh more split cards
+    //"plunder": "Plunder",
     "poorhouse": "Poor House",
     "port": "Port",
     "possession": "Possession",
@@ -193,7 +194,7 @@ var carddict = {
     "relic": "Relic",
     "remake": "Remake",
     "remodel": "Remodel",
-    "rocks": "Rocks",
+//    "rocks": "Rocks",
     "rogue": "Rogue",
     "royalblacksmith": "Royal Blacksmith",
     "royalcarriage": "Royal Carriage",
@@ -943,8 +944,8 @@ function generate(){
             console.log("added card " + cards[cards.length - 1]);
             cards.push("crown");
             console.log("added card " + cards[cards.length - 1]);
-            cards.push("emporium");
-            console.log("added card " + cards[cards.length - 1]);
+            //cards.push("emporium");
+            //console.log("added card " + cards[cards.length - 1]);
             cards.push("encampment");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("enchantress");
@@ -953,8 +954,8 @@ function generate(){
             console.log("added card " + cards[cards.length - 1]);
             cards.push("farmersmarket");
             console.log("added card " + cards[cards.length - 1]);
-            cards.push("fortune");
-            console.log("added card " + cards[cards.length - 1]);
+//            cards.push("fortune");
+//            console.log("added card " + cards[cards.length - 1]);
             cards.push("forum");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("gladiator");
@@ -967,10 +968,10 @@ function generate(){
             console.log("added card " + cards[cards.length - 1]);
             cards.push("patrician");
             console.log("added card " + cards[cards.length - 1]);
-            cards.push("plunder");
-            console.log("added card " + cards[cards.length - 1]);
-            cards.push("rocks");
-            console.log("added card " + cards[cards.length - 1]);
+            //cards.push("plunder");
+            //console.log("added card " + cards[cards.length - 1]);
+//            cards.push("rocks");
+//            console.log("added card " + cards[cards.length - 1]);
             cards.push("royalblacksmith");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("sacrifice");
@@ -1845,10 +1846,10 @@ function exclude_cards(){
             removeA(cards,"archive");
             console.log(cards);
         }
-        if (excludedcards.bustlingvillage.checked){
-            removeA(cards,"bustlingvillage");
-            console.log(cards);
-        }
+//        if (excludedcards.bustlingvillage.checked){
+//            removeA(cards,"bustlingvillage");
+//            console.log(cards);
+//        }
         if (excludedcards.capital.checked){
             removeA(cards,"capital");
             console.log(cards);
@@ -1877,10 +1878,10 @@ function exclude_cards(){
             removeA(cards,"crown");
             console.log(cards);
         }
-        if (excludedcards.emporium.checked){
-            removeA(cards,"emporium");
-            console.log(cards);
-        }
+        //if (excludedcards.emporium.checked){
+        //    removeA(cards,"emporium");
+        //    console.log(cards);
+        //}
         if (excludedcards.encampment.checked){
             removeA(cards,"encampment");
             console.log(cards);
@@ -1897,10 +1898,10 @@ function exclude_cards(){
             removeA(cards,"farmersmarket");
             console.log(cards);
         }
-        if (excludedcards.fortune.checked){
-            removeA(cards,"fortune");
-            console.log(cards);
-        }
+//        if (excludedcards.fortune.checked){
+//            removeA(cards,"fortune");
+//            console.log(cards);
+//        }
         if (excludedcards.forum.checked){
             removeA(cards,"forum");
             console.log(cards);
@@ -1925,14 +1926,14 @@ function exclude_cards(){
             removeA(cards,"patrician");
             console.log(cards);
         }
-        if (excludedcards.plunder.checked){
-            removeA(cards,"plunder");
-            console.log(cards);
-        }
-        if (excludedcards.rocks.checked){
-            removeA(cards,"rocks");
-            console.log(cards);
-        }
+//        if (excludedcards.plunder.checked){
+//            removeA(cards,"plunder");
+//            console.log(cards);
+//        }
+//        if (excludedcards.rocks.checked){
+//            removeA(cards,"rocks");
+//            console.log(cards);
+//        }
         if (excludedcards.royalblacksmith.checked){
             removeA(cards,"royalblacksmith");
             console.log(cards);
@@ -2000,12 +2001,20 @@ function exclude_cards(){
     cards=shuffle(cards);
     document.getElementById("cards_to_exclude").style.display = "none";
     document.getElementById("deck_select").style.display = "block";
-    var rememberto = 0, remembertodiv = document.getElementById("rememberto"), topoflist = document.getElementById("topoflist"), alchemypotionremember = document.getElementById("alcpotrem"), coinrem = document.getElementById("coinrem"), spoilsreminder = document.getElementById("spoilsrem"), vicreminder = document.getElementById("vicrem"), minus1coinrem = document.getElementById("m1crem"), debtrem = document.getElementById("debtrem");
+    var rememberto = 0;
+    var remembertodiv = document.getElementById("rememberto");
+    var topoflist = document.getElementById("topoflist");
+    var alchemypotionremember = document.getElementById("alcpotrem"); 
+    var coinrem = document.getElementById("coinrem");
+    var spoilsreminder = document.getElementById("spoilsrem");
+    var vicreminder = document.getElementById("vicrem"); 
+    var minus1coinrem = document.getElementById("m1crem");
+    var debtrem = document.getElementById("debtrem");
+    var tavern = document.getElementById("tavern");
+    var ruins = document.getElementById("ruins");;
+    var emb = document.getElementById("emb");
     if (setlist.indexOf("alchemy")!=-1){
         rememberto=1;
-    }
-    if (!rememberto==1){
-        topoflist.style.display = "none";
     }
     if (setlist.indexOf("alchemy")==-1){
         alchemypotionremember.style.display = "none";
@@ -2016,16 +2025,27 @@ function exclude_cards(){
     if (cards.indexOf("banditcamp")==-1){
         spoilsreminder.style.display = "none";
     }
-    if ((cards.indexOf("bishop")==-1) or (cards.indexOf("chariotrace")==-1)){
+    if ((cards.indexOf("bishop")==-1) and (cards.indexOf("chariotrace")==-1)){
         vicreminder.style.display = "none";
     }
     if (cards.indexOf("bridgetroll")==-1){
         minus1coinrem.style.display = "none";
     }
-    if (cards.indexOf("capital")==-1){
+    if ((cards.indexOf("capital")==-1) and (cards.indexOf("cityquarter")==-1) and (cards.indexOf("engineer")==-1)){
         debtrem.style.display = "none";
-    }//checked up until cityquarter, need to add it to debt reminder and continue from there
-}
+    }
+    if ((cards.indexOf("coinoftherealm")==-1) and (cards.indexOf("distantlands")==-1) and (cards.indexOf("duplicate")==-1)){
+        tavern.style.display = "none";
+    }
+    if ((cards.indexOf("cultist")==-1) and (cards.indexOf("deathcart")==-1)){
+        ruins.style.display = "none";
+    }
+    if (cards.indexOf("embargo")==-1){
+        emb.style.display = "none";
+    }
+    if (!rememberto==1){
+        topoflist.style.display = "none";
+    }
 function draw_cards(){
     cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
     if (cards.length > 2){
