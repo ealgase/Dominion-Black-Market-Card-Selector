@@ -2025,15 +2025,15 @@ function exclude_cards(){
         alchemypotionremember.style.display = "none";
     }
     ////////COIN TOKENS:
-    if ((cards.indexOf("candlestickmaker")==-1) and (cards.indexOf("merchantguild")==-1) and (cards.indexOf("baker")==-1) and (cards.indexOf("butcher")==-1) and (cards.indexOf("pirateship")==-1) and (cards.indexOf("plaza")==-1) and (cards.indexOf("traderoute")==-1)){
+    if ((cards.indexOf("candlestickmaker")==-1) && (cards.indexOf("merchantguild")==-1) && (cards.indexOf("baker")==-1) && (cards.indexOf("butcher")==-1) && (cards.indexOf("pirateship")==-1) && (cards.indexOf("plaza")==-1) && (cards.indexOf("traderoute")==-1)){
         coinrem.style.display = "none";
     }
     ///////SPOILS:
-    if ((cards.indexOf("banditcamp")==-1) and (cards.indexOf("marauder")==-1) and (cards.indexOf("pillage")==-1)){
+    if ((cards.indexOf("banditcamp")==-1) && (cards.indexOf("marauder")==-1) && (cards.indexOf("pillage")==-1)){
         spoilsreminder.style.display = "none";
     }
     ////////VICTORY TOKENS:
-    if ((cards.indexOf("bishop")==-1) and (cards.indexOf("chariotrace")==-1) and (cards.indexOf("emporium")==-1) and (cards.indexOf("goons")==-1) and (cards.indexOf("groundskeeper")==-1) and (cards.indexOf("monument")==-1) and (cards.indexOf("plunder")==-1) and (cards.indexOf("sacrifice")==-1) and (cards.indexOf("temple")==-1)){
+    if ((cards.indexOf("bishop")==-1) && (cards.indexOf("chariotrace")==-1) && (cards.indexOf("emporium")==-1) && (cards.indexOf("goons")==-1) && (cards.indexOf("groundskeeper")==-1) && (cards.indexOf("monument")==-1) && (cards.indexOf("plunder")==-1) && (cards.indexOf("sacrifice")==-1) && (cards.indexOf("temple")==-1)){
         vicreminder.style.display = "none";
     }
     ////////BRIDGE TROLL:
@@ -2041,15 +2041,15 @@ function exclude_cards(){
         minus1coinrem.style.display = "none";
     }
     ////////DEBT:
-    if ((cards.indexOf("capital")==-1) and (cards.indexOf("cityquarter")==-1) and (cards.indexOf("engineer")==-1) and (cards.indexOf("overlord")==-1) and (cards.indexOf("royalblacksmith")==-1)){
+    if ((cards.indexOf("capital")==-1) && (cards.indexOf("cityquarter")==-1) && (cards.indexOf("engineer")==-1) && (cards.indexOf("overlord")==-1) && (cards.indexOf("royalblacksmith")==-1)){
         debtrem.style.display = "none";
     }
     ////////TAVERN MAT:
-    if ((cards.indexOf("coinoftherealm")==-1) and (cards.indexOf("distantlands")==-1) and (cards.indexOf("duplicate")==-1) and (cards.indexOf("miser")==-1) and (cards.indexOf("ratcatcher")==-1) and (cards.indexOf("royalcarriage")==-1) and (cards.indexOf("transmogrify")==-1) and (cards.indexOf("winemerchant")==-1)){
+    if ((cards.indexOf("coinoftherealm")==-1) && (cards.indexOf("distantlands")==-1) && (cards.indexOf("duplicate")==-1) && (cards.indexOf("miser")==-1) && (cards.indexOf("ratcatcher")==-1) && (cards.indexOf("royalcarriage")==-1) && (cards.indexOf("transmogrify")==-1) && (cards.indexOf("winemerchant")==-1)){
         tavern.style.display = "none";
     }
     ////////RUINS:
-    if ((cards.indexOf("cultist")==-1) and (cards.indexOf("deathcart")==-1) and (cards.indexOf("marauder")==-1)){
+    if ((cards.indexOf("cultist")==-1) && (cards.indexOf("deathcart")==-1) && (cards.indexOf("marauder")==-1)){
         ruins.style.display = "none";
     }
     //////EMBARGO:
@@ -2057,7 +2057,7 @@ function exclude_cards(){
         emb.style.display = "none";
     }
     ///////JOURNEY TOKENS:
-    if ((cards.indexOf("giant")==-1) and (cards.indexOf("ranger")==-1)){
+    if ((cards.indexOf("giant")==-1) && (cards.indexOf("ranger")==-1)){
         jtr.style.display = "none";
     }
     ///////HERMIT/MADMAN:
