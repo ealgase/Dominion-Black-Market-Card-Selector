@@ -2011,40 +2011,82 @@ function exclude_cards(){
     var minus1coinrem = document.getElementById("m1crem");
     var debtrem = document.getElementById("debtrem");
     var tavern = document.getElementById("tavern");
-    var ruins = document.getElementById("ruins");;
+    var ruins = document.getElementById("ruins");
     var emb = document.getElementById("emb");
-    if (setlist.indexOf("alchemy")!=-1){
-        rememberto=1;
-    }
+    var jtr = document.getElementById("jtr");
+    var hmr = document.getElementById("hmr");
+    var nvmr = document.getElementById("nvmr");
+    var psmr = document.getElementById("psmr");
+    var relicrm = document.getElementById("relicrm");
+    var prizes = document.getElementById("prizes");
+    var trdr = document.getElementById("trdr");
+    var urme = document.getElementById("urme");
     if (setlist.indexOf("alchemy")==-1){
         alchemypotionremember.style.display = "none";
     }
-    if (((cards.indexOf("candlestickmaker")==-1) and (cards.indexOf("")==-1)) and ((cards.indexOf("baker")==-1) and (cards.indexOf("butcher")==-1))){
+    ////////COIN TOKENS:
+    if ((cards.indexOf("candlestickmaker")==-1) and (cards.indexOf("merchantguild")==-1) and (cards.indexOf("baker")==-1) and (cards.indexOf("butcher")==-1) and (cards.indexOf("pirateship")==-1) and (cards.indexOf("plaza")==-1) and (cards.indexOf("traderoute")==-1)){
         coinrem.style.display = "none";
     }
-    if (cards.indexOf("banditcamp")==-1){
+    ///////SPOILS:
+    if ((cards.indexOf("banditcamp")==-1) and (cards.indexOf("marauder")==-1) and (cards.indexOf("pillage")==-1)){
         spoilsreminder.style.display = "none";
     }
-    if ((cards.indexOf("bishop")==-1) and (cards.indexOf("chariotrace")==-1)){
+    ////////VICTORY TOKENS:
+    if ((cards.indexOf("bishop")==-1) and (cards.indexOf("chariotrace")==-1) and (cards.indexOf("emporium")==-1) and (cards.indexOf("goons")==-1) and (cards.indexOf("groundskeeper")==-1) and (cards.indexOf("monument")==-1) and (cards.indexOf("plunder")==-1) and (cards.indexOf("sacrifice")==-1) and (cards.indexOf("temple")==-1)){
         vicreminder.style.display = "none";
     }
+    ////////BRIDGE TROLL:
     if (cards.indexOf("bridgetroll")==-1){
         minus1coinrem.style.display = "none";
     }
-    if ((cards.indexOf("capital")==-1) and (cards.indexOf("cityquarter")==-1) and (cards.indexOf("engineer")==-1)){
+    ////////DEBT:
+    if ((cards.indexOf("capital")==-1) and (cards.indexOf("cityquarter")==-1) and (cards.indexOf("engineer")==-1) and (cards.indexOf("overlord")==-1) and (cards.indexOf("royalblacksmith")==-1)){
         debtrem.style.display = "none";
     }
-    if ((cards.indexOf("coinoftherealm")==-1) and (cards.indexOf("distantlands")==-1) and (cards.indexOf("duplicate")==-1)){
+    ////////TAVERN MAT:
+    if ((cards.indexOf("coinoftherealm")==-1) and (cards.indexOf("distantlands")==-1) and (cards.indexOf("duplicate")==-1) and (cards.indexOf("miser")==-1) and (cards.indexOf("ratcatcher")==-1) and (cards.indexOf("royalcarriage")==-1) and (cards.indexOf("transmogrify")==-1) and (cards.indexOf("winemerchant")==-1)){
         tavern.style.display = "none";
     }
-    if ((cards.indexOf("cultist")==-1) and (cards.indexOf("deathcart")==-1)){
+    ////////RUINS:
+    if ((cards.indexOf("cultist")==-1) and (cards.indexOf("deathcart")==-1) and (cards.indexOf("marauder")==-1)){
         ruins.style.display = "none";
     }
+    //////EMBARGO:
     if (cards.indexOf("embargo")==-1){
         emb.style.display = "none";
     }
-    if (!rememberto==1){
-        topoflist.style.display = "none";
+    ///////JOURNEY TOKENS:
+    if ((cards.indexOf("giant")==-1) and (cards.indexOf("ranger")==-1)){
+        jtr.style.display = "none";
+    }
+    ///////HERMIT/MADMAN:
+    if (cards.indexOf("hermit")==-1){
+        hmr.style.display = "none";
+    }
+    ///////NATIVE VILLAGE:
+    if (cards.indexOf("nativevillage")==-1){
+        nvmr.style.display = "none";
+    }
+    ///////PIRATE SHIP:
+    if (cards.indexOf("pirateship")==-1){
+        psmr.style.display = "none";
+    }
+    ///////RELIC:
+    if (cards.indexOf("relic")==-1){
+        relicrm.style.display = "none";
+    }
+    ///////PRIZES:
+    if (cards.indexOf("tournament")==-1){
+        prizes.style.display = "none";
+    }
+    ///////TRADE ROUTE:
+    if (cards.indexOf("traderoute")==-1){
+        trdr.style.display = "none";
+    }
+    ///////URCHIN/MERCENARY:
+    if (cards.indexOf("urchin")==-1){
+        urme.style.display = "none";
     }
 function draw_cards(){
     cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
