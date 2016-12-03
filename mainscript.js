@@ -2109,9 +2109,9 @@ function draw_cards() {
         removeA(cards, random_card2);
         random_card3 = cards[0];
         removeA(cards, random_card3);
-        card_1_image.innerHTML = "<img src='images/all/" + random_card1 + ".jpg'>";
-        card_2_image.innerHTML = "<img src='images/all/" + random_card2 + ".jpg'>";
-        card_3_image.innerHTML = "<img src='images/all/" + random_card3 + ".jpg'>";
+        card_1_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card1 + ".jpg'>";
+        card_2_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card2 + ".jpg'>";
+        card_3_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card3 + ".jpg'>";
         card_1_span.innerHTML = carddict[random_card1];
         card_2_span.innerHTML = carddict[random_card2];
         card_3_span.innerHTML = carddict[random_card3];
