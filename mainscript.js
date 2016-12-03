@@ -224,6 +224,7 @@ var carddict = {
     "stonemason": "Stonemason",
     "storeroom": "Storeroom",
     "storyteller": "Storyteller",
+    "sauna": "Sauna",
     "swamphag": "Swamphag",
     "swindler": "Swindler",
     "tactician": "Tactician",
@@ -439,6 +440,10 @@ function generate() {
     if (sets.prince.checked) {
         console.log("Adding prince");
         promolist.push("prince");
+    }
+    if (sets.sauna.checked) {
+        console.log("Adding sauna");
+        promolist.push("sauna");
     }
     if (setlist.length < 1) {
         alert("Please pick at least one set!");
@@ -1023,6 +1028,12 @@ function generate() {
             console.log("added card " + cards[cards.length - 1]);
             document.getElementById("promo-cards-to-exclude").style.display = "inline";
             document.getElementById("prince-cards-to-exclude").style.display = "inline";
+        }
+        if (promolist.indexOf("sauna") != -1) {
+            cards.push("sauna");
+            console.log("added card " + cards[cards.length - 1]);
+            document.getElementById("sauna-cards-to-exclude").style.display = "inline";
+            document.getElementById("sauna-cards-to-exclude").style.display = "inline";
         }
         /* future sets:
         if (setlist.indexOf("")!=-1){
@@ -1998,6 +2009,12 @@ function exclude_cards() {
             console.log(cards);
         }
     }
+    if (promolist.indexOf("sauna") != -1) {
+        if (excludedcards.sauna.checked) {
+            removeA(cards, "sauna");
+            console.log(cards);
+        }
+    }
     /*
     for future sets:
     if (setlist.indexOf("")!=-1){
@@ -2109,9 +2126,9 @@ function draw_cards() {
         removeA(cards, random_card2);
         random_card3 = cards[0];
         removeA(cards, random_card3);
-        card_1_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card1 + ".jpg'>";
-        card_2_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card2 + ".jpg'>";
-        card_3_image.innerHTML = "<img width="296" height="473" src='images/all/" + random_card3 + ".jpg'>";
+        card_1_image.innerHTML = "<img width='296' height='473' src='images/all/" + random_card1 + ".jpg'>";
+        card_2_image.innerHTML = "<img width='296' height='473' src='images/all/" + random_card2 + ".jpg'>";
+        card_3_image.innerHTML = "<img width='296' height='473' src='images/all/" + random_card3 + ".jpg'>";
         card_1_span.innerHTML = carddict[random_card1];
         card_2_span.innerHTML = carddict[random_card2];
         card_3_span.innerHTML = carddict[random_card3];
