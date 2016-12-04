@@ -931,8 +931,9 @@ function generate() {
             cards.push("transmogrify");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("treasuretrove");
-            console.log("added card " + cards[cards.length - 1]);
-            cards.push("warrior");
+            //dang it i thought i had worked out all the bugs
+            //console.log("added card " + cards[cards.length - 1]);
+            //cards.push("warrior");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("winemerchant");
             document.getElementById("adventures-cards-to-exclude").style.display = "inline";
