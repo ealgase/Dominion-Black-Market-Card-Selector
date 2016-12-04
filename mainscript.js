@@ -117,7 +117,7 @@ var carddict = {
     "horsetraders": "Horse Traders",
     "huntinggrounds": "Hunting Grounds",
     "huntingparty": "Hunting Party",
-    "illgottengains": "Ill Gotten Gains",
+    "illgottengains": "Ill-Gotten Gains",
     "inn": "Inn",
     "ironmonger": "Ironmonger",
     "ironworks": "Ironworks",
@@ -1795,6 +1795,10 @@ function exclude_cards() {
         }
         if (excludedcards.hireling.checked) {
             removeA(cards, "hireling");
+            console.log(cards);
+        }
+        if (excludedcards.illgottengains.checked) {
+            removeA(cards, "illgottengains");
             console.log(cards);
         }
         if (excludedcards.lostcity.checked) {
