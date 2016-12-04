@@ -2118,6 +2118,7 @@ function exclude_cards() {
 
 function draw_cards() {
     document.getElementById("rememberto").style.display = "none";
+    console.log("rememberto was removed");
     cardsleft.innerHTML = "Cards Remaining:&nbsp;" + cards.length;
     if (cards.length > 2) {
         console.log(cards);
