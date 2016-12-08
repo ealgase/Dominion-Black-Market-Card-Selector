@@ -117,7 +117,7 @@ var carddict = {
     "horsetraders": "Horse Traders",
     "huntinggrounds": "Hunting Grounds",
     "huntingparty": "Hunting Party",
-    "illgottengains": "Ill Gotten Gains",
+    "illgottengains": "Ill-Gotten Gains",
     "inn": "Inn",
     "ironmonger": "Ironmonger",
     "ironworks": "Ironworks",
@@ -341,6 +341,13 @@ function loadtable() {
                             </span>
                         </button>
                     </td>
+                    <td>
+                        <br>
+                        <button style=\"display: none;\" id=\"buynone\" type=\"button\" onclick=\"discardall()\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">Discard All</button>
+                            </span>
+                        </button>
+                    </td>
+
                 </tr>
             </table>
         `
@@ -931,8 +938,9 @@ function generate() {
             cards.push("transmogrify");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("treasuretrove");
-            console.log("added card " + cards[cards.length - 1]);
-            cards.push("warrior");
+            //dang it i thought i had worked out all the bugs
+            //console.log("added card " + cards[cards.length - 1]);
+            //cards.push("warrior");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("winemerchant");
             document.getElementById("adventures-cards-to-exclude").style.display = "inline";
@@ -1794,6 +1802,10 @@ function exclude_cards() {
         }
         if (excludedcards.hireling.checked) {
             removeA(cards, "hireling");
+            console.log(cards);
+        }
+        if (excludedcards.illgottengains.checked) {
+            removeA(cards, "illgottengains");
             console.log(cards);
         }
         if (excludedcards.lostcity.checked) {

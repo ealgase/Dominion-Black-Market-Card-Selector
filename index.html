@@ -3,7 +3,6 @@
 
 <head>
     <title>Dominion Black Market Card Selector</title>
-    <script src="jquery.min.js"></script>
     <link href="w3.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -12,6 +11,7 @@
     <div id="choose_sets">
         <h1>Select the sets you want, and click Generate Deck.</h1>
         <form name="sets" action="" method="get">
+            <h2>Sets</h2>
             <input class="dominion_sets" type="checkbox" name="base" value="Base">Base Set<br>
             <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
             <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
@@ -23,6 +23,7 @@
             <input class="dominion_sets" type="checkbox" name="guilds" value="Guilds">Guilds<br>
             <input class="dominion_sets" type="checkbox" name="adventures" value="Adventures">Adventures<br>
             <input class="dominion_sets" type="checkbox" name="empires" value="Empires">Empires<br>
+            <h2>Promo Cards</h2>
             <input class="dominion_sets" type="checkbox" name="envoy" value="Envoy">Envoy<br>
             <input class="dominion_sets" type="checkbox" name="walled" value="Walled">Walled Village<br>
             <input class="dominion_sets" type="checkbox" name="governor" value="Governor">Governor<br>
@@ -382,11 +383,11 @@
                         <button style="display: none;" id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
                                 Buy card <span id="card_3_name"></span>
                             </button>
+                        <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
+                            Discard All
+                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="w3-btn-group">
-                <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Discard All</button>
             </div>
         </div>
         <button id="draw_button" type="button" onclick="draw_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
