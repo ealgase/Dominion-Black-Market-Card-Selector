@@ -341,6 +341,13 @@ function loadtable() {
                             </span>
                         </button>
                     </td>
+                    <td>
+                        <br>
+                        <button style=\"display: none;\" id=\"buynone\" type=\"button\" onclick=\"discardall()\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">Discard All</button>
+                            </span>
+                        </button>
+                    </td>
+
                 </tr>
             </table>
         `
