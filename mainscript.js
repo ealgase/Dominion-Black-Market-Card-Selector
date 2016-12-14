@@ -1,4 +1,3 @@
-/*jslint nomen : true*/
 var carddict = {
     "adventurer": "Adventurer",
     "advisor": "Advisor",
