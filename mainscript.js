@@ -300,7 +300,7 @@ var cards = [];
 var random_card1;
 var random_card2;
 var random_card3;
-
+var placeholder = document.getElementById("placeholder");
 function shuffle(array) {
     "use strict";
     var currentIndex = array.length,
@@ -356,6 +356,7 @@ function loadtable() {
                         </button>
                     </td>
                     <td>
+			<span id=\"placeholder\"><img src=\"images/all/throneroom.jpg\"></span>
                         <br>
                         <button style=\"display: none;\" id=\"buynone\" type=\"button\" onclick=\"discardall()\" class=\"w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow\">Discard All</button>
                             </span>
@@ -372,6 +373,7 @@ window.onload = function() {
     loadtable();
     card_1_image = document.getElementById("card_1_image");
     card_2_image = document.getElementById("card_2_image");
+    placeholder = document.getElementById("placeholder");
     card_3_image = document.getElementById("card_3_image");
     card_1_span = document.getElementById("card_1_name");
     card_2_span = document.getElementById("card_2_name");
@@ -383,7 +385,6 @@ window.onload = function() {
     draw_button = document.getElementById("draw_button");
     cardsleft = document.getElementById("cards_left_h1");
 }
-
 function removeA(arr) {
     var what, a = arguments,
         L = a.length,
@@ -2275,6 +2276,7 @@ function draw_cards() {
         card_1_image.style.display = "inline";
         card_2_image.style.display = "inline";
         card_3_image.style.display = "inline";
+	placeholder.style.display = "inline";
         buy_card_1.style.display = "inline";
         buy_card_2.style.display = "inline";
         buy_card_3.style.display = "inline";
@@ -2293,6 +2295,7 @@ function draw_cards() {
         draw_button.style.display = "none";
         card_1_image.style.display = "inline";
         card_2_image.style.display = "inline";
+	placeholder.style.display = "inline";
         buy_card_1.style.display = "inline";
         buy_card_2.style.display = "inline";
         buy_none.style.display = "inline";
@@ -2306,6 +2309,7 @@ function draw_cards() {
         card_1_span.innerHTML = carddict[random_card1];
         draw_button.style.display = "none";
         card_1_image.style.display = "inline";
+        placeholder.style.display = "inline";
         buy_card_1.style.display = "inline";
         buy_none.style.display = "inline";
     } else {
@@ -2328,6 +2332,7 @@ function discardall() {
     card_1_image.style.display = "none";
     card_2_image.style.display = "none";
     card_3_image.style.display = "none";
+    placeholder.style.display = "none";
     buy_card_1.style.display = "none";
     buy_card_2.style.display = "none";
     buy_card_3.style.display = "none";
@@ -2356,6 +2361,7 @@ function buy(card_to_buy) {
     card_1_image.style.display = "none";
     card_2_image.style.display = "none";
     card_3_image.style.display = "none";
+    placeholder.style.display = "none";
     buy_card_1.style.display = "none";
     buy_card_2.style.display = "none";
     buy_card_3.style.display = "none";
