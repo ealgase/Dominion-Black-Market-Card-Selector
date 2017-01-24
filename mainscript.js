@@ -267,20 +267,20 @@ var carddict = {
     "workshop": "Workshop",
     "youngwitch": "Young Witch",
     //crap they came out with second edition cards!!!
-    "artisan":"Artisan",
-    "bandit":"Bandit",
-    "harbinger":"Harbinger",
-    "merchant":"Merchant",
-    "poacher":"Poacher",
-    "sentry":"Sentry",
-    "vassal":"Vassal",
-    "courtier":"Courtier",
-    "diplomat":"Diplomat",
-    "lurker":"Lurker",
-    "mill":"Mill",
-    "patrol":"Patrol",
-    "replace":"Replace",
-    "secretpassage":"Secret Passage"
+    "artisan": "Artisan",
+    "bandit": "Bandit",
+    "harbinger": "Harbinger",
+    "merchant": "Merchant",
+    "poacher": "Poacher",
+    "sentry": "Sentry",
+    "vassal": "Vassal",
+    "courtier": "Courtier",
+    "diplomat": "Diplomat",
+    "lurker": "Lurker",
+    "mill": "Mill",
+    "patrol": "Patrol",
+    "replace": "Replace",
+    "secretpassage": "Secret Passage"
 };
 
 function checkAll(formname, checktoggle) {
@@ -301,23 +301,21 @@ var random_card1;
 var random_card2;
 var random_card3;
 var placeholder = document.getElementById("placeholder");
+
 function shuffle(array) {
     "use strict";
     var currentIndex = array.length,
         temporaryValue, randomIndex;
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
     return array;
 }
 
@@ -385,6 +383,7 @@ window.onload = function() {
     draw_button = document.getElementById("draw_button");
     cardsleft = document.getElementById("cards_left_h1");
 }
+
 function removeA(arr) {
     var what, a = arguments,
         L = a.length,
@@ -527,8 +526,7 @@ function generate() {
             console.log("added card " + cards[cards.length - 1]);
             document.getElementById("base-cards-to-exclude").style.display = "inline";
         }
-        
-        if (setlist.indexOf("base1") != -1) {//first edition exclusive
+        if (setlist.indexOf("base1") != -1) { //first edition exclusive
             cards.push("chancellor");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("woodcutter");
@@ -543,7 +541,7 @@ function generate() {
             console.log("added card " + cards[cards.length - 1]);
             document.getElementById("base1-cards-to-exclude").style.display = "inline";
         }
-        if (setlist.indexOf("base2") != -1) {//second edition exclusive
+        if (setlist.indexOf("base2") != -1) { //second edition exclusive
             cards.push("artisan");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("bandit");
@@ -601,7 +599,7 @@ function generate() {
             console.log("added card " + cards[cards.length - 1]);
             document.getElementById("intrigue-cards-to-exclude").style.display = "inline";
         }
-        if (setlist.indexOf("intrigue1") != -1) {//first edition exclusive
+        if (setlist.indexOf("intrigue1") != -1) { //first edition exclusive
             cards.push("secretchamber");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("greathall");
@@ -616,7 +614,7 @@ function generate() {
             console.log("added card " + cards[cards.length - 1]);
             document.getElementById("intrigue1-cards-to-exclude").style.display = "inline";
         }
-        if (setlist.indexOf("intrigue2") != -1) {//second edition exclusive
+        if (setlist.indexOf("intrigue2") != -1) { //second edition exclusive
             cards.push("courtier");
             console.log("added card " + cards[cards.length - 1]);
             cards.push("diplomat");
@@ -1127,127 +1125,102 @@ function generate() {
 
 function exclude_cards() {
     if (excludedcards.adventurer.checked) {
-
         removeA(cards, "adventurer");
         console.log(cards);
     }
     if (excludedcards.bureaucrat.checked) {
-
         removeA(cards, "bureaucrat");
         console.log(cards);
     }
     if (excludedcards.cellar.checked) {
-
         removeA(cards, "cellar");
         console.log(cards);
     }
     if (excludedcards.chancellor.checked) {
-
         removeA(cards, "chancellor");
         console.log(cards);
     }
     if (excludedcards.chapel.checked) {
-
         removeA(cards, "chapel");
         console.log(cards);
     }
     if (excludedcards.councilroom.checked) {
-
         removeA(cards, "councilroom");
         console.log(cards);
     }
     if (excludedcards.feast.checked) {
-
         removeA(cards, "feast");
         console.log(cards);
     }
     if (excludedcards.festival.checked) {
-
         removeA(cards, "festival");
         console.log(cards);
     }
     if (excludedcards.gardens.checked) {
-
         removeA(cards, "gardens");
         console.log(cards);
     }
     if (excludedcards.laboratory.checked) {
-
         removeA(cards, "laboratory");
         console.log(cards);
     }
     if (excludedcards.library.checked) {
-
         removeA(cards, "library");
         console.log(cards);
     }
     if (excludedcards.market.checked) {
-
         removeA(cards, "market");
         console.log(cards);
     }
     if (excludedcards.militia.checked) {
-
         removeA(cards, "militia");
         console.log(cards);
     }
     if (excludedcards.mine.checked) {
-
         removeA(cards, "mine");
         console.log(cards);
     }
     if (excludedcards.moat.checked) {
-
         removeA(cards, "moat");
         console.log(cards);
     }
     if (excludedcards.moneylender.checked) {
-
         removeA(cards, "moneylender");
         console.log(cards);
     }
     if (excludedcards.remodel.checked) {
-
         removeA(cards, "remodel");
         console.log(cards);
     }
     if (excludedcards.smithy.checked) {
-
         removeA(cards, "smithy");
         console.log(cards);
     }
     if (excludedcards.spy.checked) {
-
         removeA(cards, "spy");
         console.log(cards);
     }
     if (excludedcards.thief.checked) {
-
         removeA(cards, "thief");
         console.log(cards);
     }
     if (excludedcards.throneroom.checked) {
-
         removeA(cards, "throneroom");
         console.log(cards);
     }
     if (excludedcards.village.checked) {
-
         removeA(cards, "village");
         console.log(cards);
     }
     if (excludedcards.witch.checked) {
-
         removeA(cards, "witch");
         console.log(cards);
     }
     if (excludedcards.woodcutter.checked) {
-
         removeA(cards, "woodcutter");
         console.log(cards);
     }
     if (excludedcards.workshop.checked) {
-
         removeA(cards, "workshop");
         console.log(cards);
     }
@@ -2276,7 +2249,7 @@ function draw_cards() {
         card_1_image.style.display = "inline";
         card_2_image.style.display = "inline";
         card_3_image.style.display = "inline";
-	placeholder.style.display = "inline";
+        placeholder.style.display = "inline";
         buy_card_1.style.display = "inline";
         buy_card_2.style.display = "inline";
         buy_card_3.style.display = "inline";
@@ -2295,7 +2268,7 @@ function draw_cards() {
         draw_button.style.display = "none";
         card_1_image.style.display = "inline";
         card_2_image.style.display = "inline";
-	placeholder.style.display = "inline";
+        placeholder.style.display = "inline";
         buy_card_1.style.display = "inline";
         buy_card_2.style.display = "inline";
         buy_none.style.display = "inline";
