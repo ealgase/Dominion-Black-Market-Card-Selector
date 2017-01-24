@@ -6,422 +6,377 @@
     <link href="main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <script src="mainscript.js"></script>
+    <script src="mainscript.js">
+    </script>
     <div id="choose_sets">
         <h1>Select the sets you want, and click Generate Deck.</h1>
-        <form name="sets" action="" method="get">
-            <h2>Sets</h2>
-            <input class="dominion_sets" type="checkbox" name="base" value="Base">Base Set<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="dominion_sets" type="checkbox" name="base1" value="Base1">1st edition exclusive cards<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="dominion_sets" type="checkbox" name="base2" value="Base2">2st edition exclusive cards<br>
-            <input class="dominion_sets" type="checkbox" name="intrigue" value="Intrigue">Intrigue<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="dominion_sets" type="checkbox" name="intrigue1" value="Intrigue1">1st edition exclusive cards<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="dominion_sets" type="checkbox" name="intrigue2" value="Intrigue2">2st edition exclusive cards<br>
-            <input class="dominion_sets" type="checkbox" name="seaside" value="Seaside">Seaside<br>
-            <input class="dominion_sets" type="checkbox" name="alchemy" value="Alchemy">Alchemy<br>
-            <input class="dominion_sets" type="checkbox" name="prosperity" value="Prosperity">Prosperity<br>
-            <input class="dominion_sets" type="checkbox" name="cornucopia" value="Cornucopia">Cornucopia<br>
-            <input class="dominion_sets" type="checkbox" name="hinterlands" value="Hinterlands">Hinterlands<br>
-            <input class="dominion_sets" type="checkbox" name="dark" value="Dark">Dark Ages<br>
-            <input class="dominion_sets" type="checkbox" name="guilds" value="Guilds">Guilds<br>
-            <input class="dominion_sets" type="checkbox" name="adventures" value="Adventures">Adventures<br>
-            <input class="dominion_sets" type="checkbox" name="empires" value="Empires">Empires<br>
-            <h2>Promo Cards</h2>
-            <input class="dominion_sets" type="checkbox" name="envoy" value="Envoy">Envoy<br>
-            <input class="dominion_sets" type="checkbox" name="walled" value="Walled">Walled Village<br>
-            <input class="dominion_sets" type="checkbox" name="governor" value="Governor">Governor<br>
-            <input class="dominion_sets" type="checkbox" name="stash" value="Stash">Stash<br>
-            <input class="dominion_sets" type="checkbox" name="prince" value="Prince">Prince<br>
-            <input class="dominion_sets" type="checkbox" name="sauna" value="Sauna">Sauna<br>
+        <form action="" id="sets" method="get" name="sets">
+            <h2>Sets</h2><input class="dominion_sets" name="base" type="checkbox" value="Base">Base Set<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base1" type="checkbox" value="Base1">1st edition exclusive cards<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base2" type="checkbox" value="Base2">2st edition exclusive cards<br>
+            <input class="dominion_sets" name="intrigue" type="checkbox" value="Intrigue">Intrigue<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue1" type="checkbox" value="Intrigue1">1st edition exclusive cards<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue2" type="checkbox" value="Intrigue2">2st edition exclusive cards<br>
+            <input class="dominion_sets" name="seaside" type="checkbox" value="Seaside">Seaside<br>
+            <input class="dominion_sets" name="alchemy" type="checkbox" value="Alchemy">Alchemy<br>
+            <input class="dominion_sets" name="prosperity" type="checkbox" value="Prosperity">Prosperity<br>
+            <input class="dominion_sets" name="cornucopia" type="checkbox" value="Cornucopia">Cornucopia<br>
+            <input class="dominion_sets" name="hinterlands" type="checkbox" value="Hinterlands">Hinterlands<br>
+            <input class="dominion_sets" name="dark" type="checkbox" value="Dark">Dark Ages<br>
+            <input class="dominion_sets" name="guilds" type="checkbox" value="Guilds">Guilds<br>
+            <input class="dominion_sets" name="adventures" type="checkbox" value="Adventures">Adventures<br>
+            <input class="dominion_sets" name="empires" type="checkbox" value="Empires">Empires<br>
+            <h2>Promo Cards</h2><input class="dominion_sets" name="envoy" type="checkbox" value="Envoy">Envoy<br>
+            <input class="dominion_sets" name="walled" type="checkbox" value="Walled">Walled Village<br>
+            <input class="dominion_sets" name="governor" type="checkbox" value="Governor">Governor<br>
+            <input class="dominion_sets" name="stash" type="checkbox" value="Stash">Stash<br>
+            <input class="dominion_sets" name="prince" type="checkbox" value="Prince">Prince<br>
+            <input class="dominion_sets" name="sauna" type="checkbox" value="Sauna">Sauna<br>
             <div class="w3-btn-group">
-                <input type="button" name="all" value="Select All" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="checkAll('sets',true);">
-                <input type="button" name="all" value="Unselect All" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="checkAll('sets',false);">
-                <button type="button" onclick="generate()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Generate Deck</button>
+                <input class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" name="all" onclick="checkAll('sets',true);" type="button" value="Select All"> <input class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" name="all" onclick="checkAll('sets',false);" type="button" value="Unselect All"> <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="generate()" type="button">Generate Deck</button>
             </div>
         </form>
     </div>
     <div id="cards_to_exclude" style="display: none;">
-        <h1>
-            Which cards do you NOT want in the black market deck(already in game)
-        </h1>
-        <form id="form-cards-to-exclude" name="excludedcards" action="" method="get">
+        <h1>Which cards do you NOT want in the black market deck(already in game)</h1>
+        <form action="" id="form-cards-to-exclude" method="get" name="excludedcards">
             <div id="base-cards-to-exclude" style="display: none;">
-                <h2>Base Set</h2>
-                <input type="checkbox" name="bureaucrat" value="exclude">Bureaucrat<br>
-                <input type="checkbox" name="cellar" value="exclude">Cellar<br>
-                <input type="checkbox" name="chapel" value="exclude">Chapel<br>
-                <input type="checkbox" name="councilroom" value="exclude">Council Room<br>
-                <input type="checkbox" name="festival" value="exclude">Festival<br>
-                <input type="checkbox" name="gardens" value="exclude">Gardens<br>
-                <input type="checkbox" name="laboratory" value="exclude">Laboratory<br>
-                <input type="checkbox" name="library" value="exclude">Library<br>
-                <input type="checkbox" name="market" value="exclude">Market<br>
-                <input type="checkbox" name="militia" value="exclude">Militia<br>
-                <input type="checkbox" name="mine" value="exclude">Mine<br>
-                <input type="checkbox" name="moat" value="exclude">Moat<br>
-                <input type="checkbox" name="moneylender" value="exclude">Moneylender<br>
-                <input type="checkbox" name="remodel" value="exclude">Remodel<br>
-                <input type="checkbox" name="smithy" value="exclude">Smithy<br>
-                <input type="checkbox" name="throneroom" value="exclude">Throne Room<br>
-                <input type="checkbox" name="village" value="exclude">Village<br>
-                <input type="checkbox" name="witch" value="exclude">Witch<br>
-                <input type="checkbox" name="workshop" value="exclude">Workshop<br>
+                <h2>Base Set</h2><input name="bureaucrat" type="checkbox" value="exclude">Bureaucrat<br>
+                <input name="cellar" type="checkbox" value="exclude">Cellar<br>
+                <input name="chapel" type="checkbox" value="exclude">Chapel<br>
+                <input name="councilroom" type="checkbox" value="exclude">Council Room<br>
+                <input name="festival" type="checkbox" value="exclude">Festival<br>
+                <input name="gardens" type="checkbox" value="exclude">Gardens<br>
+                <input name="laboratory" type="checkbox" value="exclude">Laboratory<br>
+                <input name="library" type="checkbox" value="exclude">Library<br>
+                <input name="market" type="checkbox" value="exclude">Market<br>
+                <input name="militia" type="checkbox" value="exclude">Militia<br>
+                <input name="mine" type="checkbox" value="exclude">Mine<br>
+                <input name="moat" type="checkbox" value="exclude">Moat<br>
+                <input name="moneylender" type="checkbox" value="exclude">Moneylender<br>
+                <input name="remodel" type="checkbox" value="exclude">Remodel<br>
+                <input name="smithy" type="checkbox" value="exclude">Smithy<br>
+                <input name="throneroom" type="checkbox" value="exclude">Throne Room<br>
+                <input name="village" type="checkbox" value="exclude">Village<br>
+                <input name="witch" type="checkbox" value="exclude">Witch<br>
+                <input name="workshop" type="checkbox" value="exclude">Workshop<br>
             </div>
             <div id="base1-cards-to-exclude" style="display: none;">
-                <input type="checkbox" name="chancellor" value="exclude">Chancellor<br>
-                <input type="checkbox" name="woodcutter" value="exclude">Woodcutter<br>
-                <input type="checkbox" name="feast" value="exclude">Feast<br>
-                <input type="checkbox" name="spy" value="exclude">Spy<br>
-                <input type="checkbox" name="thief" value="exclude">Thief<br>
-                <input type="checkbox" name="adventurer" value="exclude">Adventurer<br>
+                <input name="chancellor" type="checkbox" value="exclude">Chancellor<br>
+                <input name="woodcutter" type="checkbox" value="exclude">Woodcutter<br>
+                <input name="feast" type="checkbox" value="exclude">Feast<br>
+                <input name="spy" type="checkbox" value="exclude">Spy<br>
+                <input name="thief" type="checkbox" value="exclude">Thief<br>
+                <input name="adventurer" type="checkbox" value="exclude">Adventurer<br>
             </div>
             <div id="base2-cards-to-exclude" style="display: none;">
-                <input type="checkbox" name="artisan" value="exclude">Artisan<br>
-                <input type="checkbox" name="bandit" value="exclude">Bandit<br>
-                <input type="checkbox" name="harbinger" value="exclude">Harbinger<br>
-                <input type="checkbox" name="merchant" value="exclude">Merchant<br>
-                <input type="checkbox" name="poacher" value="exclude">Poacher<br>
-                <input type="checkbox" name="sentry" value="exclude">Sentry<br>
-                <input type="checkbox" name="vassal" value="exclude">Vassal<br>
+                <input name="artisan" type="checkbox" value="exclude">Artisan<br>
+                <input name="bandit" type="checkbox" value="exclude">Bandit<br>
+                <input name="harbinger" type="checkbox" value="exclude">Harbinger<br>
+                <input name="merchant" type="checkbox" value="exclude">Merchant<br>
+                <input name="poacher" type="checkbox" value="exclude">Poacher<br>
+                <input name="sentry" type="checkbox" value="exclude">Sentry<br>
+                <input name="vassal" type="checkbox" value="exclude">Vassal<br>
             </div>
             <div id="intrigue-cards-to-exclude" style="display: none;">
-                <h2>Intrigue</h2>
-                <input type="checkbox" name="baron" value="exclude">Baron<br>
-                <input type="checkbox" name="bridge" value="exclude">Bridge<br>
-                <input type="checkbox" name="conspirator" value="exclude">Conspirator<br>
-                <input type="checkbox" name="courtyard" value="exclude">Courtyard<br>
-                <input type="checkbox" name="duke" value="exclude">Duke<br>
-                <input type="checkbox" name="harem" value="exclude">Harem<br>
-                <input type="checkbox" name="ironworks" value="exclude">Ironworks<br>
-                <input type="checkbox" name="masquerade" value="exclude">Masquerade<br>
-                <input type="checkbox" name="miningvillage" value="exclude">Mining Village<br>
-                <input type="checkbox" name="minion" value="exclude">Minion<br>
-                <input type="checkbox" name="nobles" value="exclude">Nobles<br>
-                <input type="checkbox" name="pawn" value="exclude">Pawn<br>
-                <input type="checkbox" name="shantytown" value="exclude">Shanty Town<br>
-                <input type="checkbox" name="steward" value="exclude">Steward<br>
-                <input type="checkbox" name="swindler" value="exclude">Swindler<br>
-                <input type="checkbox" name="torturer" value="exclude">Torturer<br>
-                <input type="checkbox" name="tradingpost" value="exclude">Trading Post<br>
-                <input type="checkbox" name="upgrade" value="exclude">Upgrade<br>
-                <input type="checkbox" name="wishingwell" value="exclude">Wishing Well<br>
+                <h2>Intrigue</h2><input name="baron" type="checkbox" value="exclude">Baron<br>
+                <input name="bridge" type="checkbox" value="exclude">Bridge<br>
+                <input name="conspirator" type="checkbox" value="exclude">Conspirator<br>
+                <input name="courtyard" type="checkbox" value="exclude">Courtyard<br>
+                <input name="duke" type="checkbox" value="exclude">Duke<br>
+                <input name="harem" type="checkbox" value="exclude">Harem<br>
+                <input name="ironworks" type="checkbox" value="exclude">Ironworks<br>
+                <input name="masquerade" type="checkbox" value="exclude">Masquerade<br>
+                <input name="miningvillage" type="checkbox" value="exclude">Mining Village<br>
+                <input name="minion" type="checkbox" value="exclude">Minion<br>
+                <input name="nobles" type="checkbox" value="exclude">Nobles<br>
+                <input name="pawn" type="checkbox" value="exclude">Pawn<br>
+                <input name="shantytown" type="checkbox" value="exclude">Shanty Town<br>
+                <input name="steward" type="checkbox" value="exclude">Steward<br>
+                <input name="swindler" type="checkbox" value="exclude">Swindler<br>
+                <input name="torturer" type="checkbox" value="exclude">Torturer<br>
+                <input name="tradingpost" type="checkbox" value="exclude">Trading Post<br>
+                <input name="upgrade" type="checkbox" value="exclude">Upgrade<br>
+                <input name="wishingwell" type="checkbox" value="exclude">Wishing Well<br>
             </div>
             <div id="intrigue1-cards-to-exclude" style="display: none;">
-                <input type="checkbox" name="secretchamber" value="exclude">Secret Chamber<br>
-                <input type="checkbox" name="greathall" value="exclude">Great Hall<br>
-                <input type="checkbox" name="coppersmith" value="exclude">Coppersmith<br>
-                <input type="checkbox" name="scout" value="exclude">Scout<br>
-                <input type="checkbox" name="saboteur" value="exclude">Saboteur<br>
-                <input type="checkbox" name="tribute" value="exclude">Tribute<br>
+                <input name="secretchamber" type="checkbox" value="exclude">Secret Chamber<br>
+                <input name="greathall" type="checkbox" value="exclude">Great Hall<br>
+                <input name="coppersmith" type="checkbox" value="exclude">Coppersmith<br>
+                <input name="scout" type="checkbox" value="exclude">Scout<br>
+                <input name="saboteur" type="checkbox" value="exclude">Saboteur<br>
+                <input name="tribute" type="checkbox" value="exclude">Tribute<br>
             </div>
             <div id="intrigue2-cards-to-exclude" style="display: none;">
-                <input type="checkbox" name="courtier" value="exclude">Courtier<br>
-                <input type="checkbox" name="diplomat" value="exclude">Diplomat<br>
-                <input type="checkbox" name="lurker" value="exclude">Lurker<br>
-                <input type="checkbox" name="mill" value="exclude">Mill<br>
-                <input type="checkbox" name="patrol" value="exclude">Patrol<br>
-                <input type="checkbox" name="replace" value="exclude">Replace<br>
-                <input type="checkbox" name="secretpassage" value="exclude">Secret Passage<br>
+                <input name="courtier" type="checkbox" value="exclude">Courtier<br>
+                <input name="diplomat" type="checkbox" value="exclude">Diplomat<br>
+                <input name="lurker" type="checkbox" value="exclude">Lurker<br>
+                <input name="mill" type="checkbox" value="exclude">Mill<br>
+                <input name="patrol" type="checkbox" value="exclude">Patrol<br>
+                <input name="replace" type="checkbox" value="exclude">Replace<br>
+                <input name="secretpassage" type="checkbox" value="exclude">Secret Passage<br>
             </div>
             <div id="seaside-cards-to-exclude" style="display: none;">
-                <h2>Seaside</h2>
-                <input type="checkbox" name="ambassador" value="exclude">Ambassador<br>
-                <input type="checkbox" name="bazaar" value="exclude">Bazaar<br>
-                <input type="checkbox" name="caravan" value="exclude">Caravan<br>
-                <input type="checkbox" name="cutpurse" value="exclude">Cutpurse<br>
-                <input type="checkbox" name="embargo" value="exclude">Embargo<br>
-                <input type="checkbox" name="explorer" value="exclude">Explorer<br>
-                <input type="checkbox" name="fishingvillage" value="exclude">Fishing Village<br>
-                <input type="checkbox" name="ghostship" value="exclude">Ghost Ship<br>
-                <input type="checkbox" name="haven" value="exclude">Haven<br>
-                <input type="checkbox" name="island" value="exclude">Island<br>
-                <input type="checkbox" name="lighthouse" value="exclude">Lighthouse<br>
-                <input type="checkbox" name="lookout" value="exclude">Lookout<br>
-                <input type="checkbox" name="merchantship" value="exclude">Merchant Ship<br>
-                <input type="checkbox" name="nativevillage" value="exclude">Native Village<br>
-                <input type="checkbox" name="navigator" value="exclude">Navigator<br>
-                <input type="checkbox" name="outpost" value="exclude">Outpost<br>
-                <input type="checkbox" name="pearldiver" value="exclude">Pearl Diver<br>
-                <input type="checkbox" name="pirateship" value="exclude">Pirate Ship<br>
-                <input type="checkbox" name="salvager" value="exclude">Salvager<br>
-                <input type="checkbox" name="seahag" value="exclude">Sea Hag<br>
-                <input type="checkbox" name="smugglers" value="exclude">Smugglers<br>
-                <input type="checkbox" name="tactician" value="exclude">Tactician<br>
-                <input type="checkbox" name="treasuremap" value="exclude">Treasure Map<br>
-                <input type="checkbox" name="treasury" value="exclude">Treasury<br>
-                <input type="checkbox" name="warehouse" value="exclude">Warehouse<br>
-                <input type="checkbox" name="wharf" value="exclude">Wharf<br>
+                <h2>Seaside</h2><input name="ambassador" type="checkbox" value="exclude">Ambassador<br>
+                <input name="bazaar" type="checkbox" value="exclude">Bazaar<br>
+                <input name="caravan" type="checkbox" value="exclude">Caravan<br>
+                <input name="cutpurse" type="checkbox" value="exclude">Cutpurse<br>
+                <input name="embargo" type="checkbox" value="exclude">Embargo<br>
+                <input name="explorer" type="checkbox" value="exclude">Explorer<br>
+                <input name="fishingvillage" type="checkbox" value="exclude">Fishing Village<br>
+                <input name="ghostship" type="checkbox" value="exclude">Ghost Ship<br>
+                <input name="haven" type="checkbox" value="exclude">Haven<br>
+                <input name="island" type="checkbox" value="exclude">Island<br>
+                <input name="lighthouse" type="checkbox" value="exclude">Lighthouse<br>
+                <input name="lookout" type="checkbox" value="exclude">Lookout<br>
+                <input name="merchantship" type="checkbox" value="exclude">Merchant Ship<br>
+                <input name="nativevillage" type="checkbox" value="exclude">Native Village<br>
+                <input name="navigator" type="checkbox" value="exclude">Navigator<br>
+                <input name="outpost" type="checkbox" value="exclude">Outpost<br>
+                <input name="pearldiver" type="checkbox" value="exclude">Pearl Diver<br>
+                <input name="pirateship" type="checkbox" value="exclude">Pirate Ship<br>
+                <input name="salvager" type="checkbox" value="exclude">Salvager<br>
+                <input name="seahag" type="checkbox" value="exclude">Sea Hag<br>
+                <input name="smugglers" type="checkbox" value="exclude">Smugglers<br>
+                <input name="tactician" type="checkbox" value="exclude">Tactician<br>
+                <input name="treasuremap" type="checkbox" value="exclude">Treasure Map<br>
+                <input name="treasury" type="checkbox" value="exclude">Treasury<br>
+                <input name="warehouse" type="checkbox" value="exclude">Warehouse<br>
+                <input name="wharf" type="checkbox" value="exclude">Wharf<br>
             </div>
             <div id="alchemy-cards-to-exclude" style="display: none;">
-                <h2>Alchemy</h2>
-                <input type="checkbox" name="alchemist" value="exclude">Alchemist<br>
-                <input type="checkbox" name="apothecary" value="exclude">Apothecary<br>
-                <input type="checkbox" name="apprentice" value="exclude">Apprentice<br>
-                <input type="checkbox" name="familiar" value="exclude">Familiar<br>
-                <input type="checkbox" name="golem" value="exclude">Golem<br>
-                <input type="checkbox" name="herbalist" value="exclude">Herbalist<br>
-                <input type="checkbox" name="philosophersstone" value="exclude">Philosophers Stone<br>
-                <input type="checkbox" name="possession" value="exclude">Possession<br>
-                <input type="checkbox" name="scryingpool" value="exclude">Scrying Pool<br>
-                <input type="checkbox" name="transmute" value="exclude">Transmute<br>
-                <input type="checkbox" name="university" value="exclude">University<br>
-                <input type="checkbox" name="vineyard" value="exclude">Vineyard<br>
+                <h2>Alchemy</h2><input name="alchemist" type="checkbox" value="exclude">Alchemist<br>
+                <input name="apothecary" type="checkbox" value="exclude">Apothecary<br>
+                <input name="apprentice" type="checkbox" value="exclude">Apprentice<br>
+                <input name="familiar" type="checkbox" value="exclude">Familiar<br>
+                <input name="golem" type="checkbox" value="exclude">Golem<br>
+                <input name="herbalist" type="checkbox" value="exclude">Herbalist<br>
+                <input name="philosophersstone" type="checkbox" value="exclude">Philosophers Stone<br>
+                <input name="possession" type="checkbox" value="exclude">Possession<br>
+                <input name="scryingpool" type="checkbox" value="exclude">Scrying Pool<br>
+                <input name="transmute" type="checkbox" value="exclude">Transmute<br>
+                <input name="university" type="checkbox" value="exclude">University<br>
+                <input name="vineyard" type="checkbox" value="exclude">Vineyard<br>
             </div>
             <div id="prosperity-cards-to-exclude" style="display: none;">
-                <h2>Prosperity</h2>
-                <input type="checkbox" name="bank" value="exclude">Bank<br>
-                <input type="checkbox" name="bishop" value="exclude">Bishop<br>
-                <input type="checkbox" name="city" value="exclude">City<br>
-                <input type="checkbox" name="contraband" value="exclude">Contraband<br>
-                <input type="checkbox" name="countinghouse" value="exclude">Counting House<br>
-                <input type="checkbox" name="expand" value="exclude">Expand<br>
-                <input type="checkbox" name="forge" value="exclude">Forge<br>
-                <input type="checkbox" name="goons" value="exclude">Goons<br>
-                <input type="checkbox" name="grandmarket" value="exclude">Grand Market<br>
-                <input type="checkbox" name="hoard" value="exclude">Hoard<br>
-                <input type="checkbox" name="kingscourt" value="exclude">King's Court<br>
-                <input type="checkbox" name="loan" value="exclude">Loan<br>
-                <input type="checkbox" name="mint" value="exclude">Mint<br>
-                <input type="checkbox" name="monument" value="exclude">Monument<br>
-                <input type="checkbox" name="mountebank" value="exclude">Mountebank<br>
-                <input type="checkbox" name="peddler" value="exclude">Peddler<br>
-                <input type="checkbox" name="quarry" value="exclude">Quarry<br>
-                <input type="checkbox" name="rabble" value="exclude">Rabble<br>
-                <input type="checkbox" name="royalseal" value="exclude">Royal Seal<br>
-                <input type="checkbox" name="talisman" value="exclude">Talisman<br>
-                <input type="checkbox" name="traderoute" value="exclude">Trade Route<br>
-                <input type="checkbox" name="vault" value="exclude">Vault<br>
-                <input type="checkbox" name="venture" value="exclude">Venture<br>
-                <input type="checkbox" name="watchtower" value="exclude">Watchtower<br>
-                <input type="checkbox" name="workersvillage" value="exclude">Workers Village<br>
+                <h2>Prosperity</h2><input name="bank" type="checkbox" value="exclude">Bank<br>
+                <input name="bishop" type="checkbox" value="exclude">Bishop<br>
+                <input name="city" type="checkbox" value="exclude">City<br>
+                <input name="contraband" type="checkbox" value="exclude">Contraband<br>
+                <input name="countinghouse" type="checkbox" value="exclude">Counting House<br>
+                <input name="expand" type="checkbox" value="exclude">Expand<br>
+                <input name="forge" type="checkbox" value="exclude">Forge<br>
+                <input name="goons" type="checkbox" value="exclude">Goons<br>
+                <input name="grandmarket" type="checkbox" value="exclude">Grand Market<br>
+                <input name="hoard" type="checkbox" value="exclude">Hoard<br>
+                <input name="kingscourt" type="checkbox" value="exclude">King's Court<br>
+                <input name="loan" type="checkbox" value="exclude">Loan<br>
+                <input name="mint" type="checkbox" value="exclude">Mint<br>
+                <input name="monument" type="checkbox" value="exclude">Monument<br>
+                <input name="mountebank" type="checkbox" value="exclude">Mountebank<br>
+                <input name="peddler" type="checkbox" value="exclude">Peddler<br>
+                <input name="quarry" type="checkbox" value="exclude">Quarry<br>
+                <input name="rabble" type="checkbox" value="exclude">Rabble<br>
+                <input name="royalseal" type="checkbox" value="exclude">Royal Seal<br>
+                <input name="talisman" type="checkbox" value="exclude">Talisman<br>
+                <input name="traderoute" type="checkbox" value="exclude">Trade Route<br>
+                <input name="vault" type="checkbox" value="exclude">Vault<br>
+                <input name="venture" type="checkbox" value="exclude">Venture<br>
+                <input name="watchtower" type="checkbox" value="exclude">Watchtower<br>
+                <input name="workersvillage" type="checkbox" value="exclude">Workers Village<br>
             </div>
             <div id="cornucopia-cards-to-exclude" style="display: none;">
-                <h2>Cornucopia</h2>
-                <input type="checkbox" name="fairgrounds" value="exclude">Fairgrounds<br>
-                <input type="checkbox" name="farmingvillage" value="exclude">Farming Village<br>
-                <input type="checkbox" name="fortuneteller" value="exclude">Fortune Teller<br>
-                <input type="checkbox" name="hamlet" value="exclude">Hamlet<br>
-                <input type="checkbox" name="harvest" value="exclude">Harvest<br>
-                <input type="checkbox" name="hornofplenty" value="exclude">Horn of Plenty<br>
-                <input type="checkbox" name="horsetraders" value="exclude">Horse Traders<br>
-                <input type="checkbox" name="huntingparty" value="exclude">Hunting Party<br>
-                <input type="checkbox" name="jester" value="exclude">Jester<br>
-                <input type="checkbox" name="menagerie" value="exclude">Menagerie<br>
-                <input type="checkbox" name="remake" value="exclude">Remake<br>
-                <input type="checkbox" name="tournament" value="exclude">Tournament<br>
-                <input type="checkbox" name="youngwitch" value="exclude">Young Witch<br>
+                <h2>Cornucopia</h2><input name="fairgrounds" type="checkbox" value="exclude">Fairgrounds<br>
+                <input name="farmingvillage" type="checkbox" value="exclude">Farming Village<br>
+                <input name="fortuneteller" type="checkbox" value="exclude">Fortune Teller<br>
+                <input name="hamlet" type="checkbox" value="exclude">Hamlet<br>
+                <input name="harvest" type="checkbox" value="exclude">Harvest<br>
+                <input name="hornofplenty" type="checkbox" value="exclude">Horn of Plenty<br>
+                <input name="horsetraders" type="checkbox" value="exclude">Horse Traders<br>
+                <input name="huntingparty" type="checkbox" value="exclude">Hunting Party<br>
+                <input name="jester" type="checkbox" value="exclude">Jester<br>
+                <input name="menagerie" type="checkbox" value="exclude">Menagerie<br>
+                <input name="remake" type="checkbox" value="exclude">Remake<br>
+                <input name="tournament" type="checkbox" value="exclude">Tournament<br>
+                <input name="youngwitch" type="checkbox" value="exclude">Young Witch<br>
             </div>
             <div id="hinterlands-cards-to-exclude" style="display: none;">
-                <h2>Hinterlands</h2>
-                <input type="checkbox" name="bordervillage" value="exclude">Border Village<br>
-                <input type="checkbox" name="cache" value="exclude">Cache<br>
-                <input type="checkbox" name="cartographer" value="exclude">Cartographer<br>
-                <input type="checkbox" name="crossroads" value="exclude">Crossroads<br>
-                <input type="checkbox" name="develop" value="exclude">Develop<br>
-                <input type="checkbox" name="duchess" value="exclude">Duchess<br>
-                <input type="checkbox" name="embassy" value="exclude">Embassy<br>
-                <input type="checkbox" name="farmland" value="exclude">Farmland<br>
-                <input type="checkbox" name="foolsgold" value="exclude">Fools Gold<br>
-                <input type="checkbox" name="haggler" value="exclude">Haggler<br>
-                <input type="checkbox" name="highway" value="exclude">Highway<br>
-                <input type="checkbox" name="illgottengains" value="exclude">Ill Gotten Gains<br>
-                <input type="checkbox" name="inn" value="exclude">Inn<br>
-                <input type="checkbox" name="jackofalltrades" value="exclude">Jack of all Trades<br>
-                <input type="checkbox" name="mandarin" value="exclude">Mandarin<br>
-                <input type="checkbox" name="margrave" value="exclude">Margrave<br>
-                <input type="checkbox" name="noblebrigand" value="exclude">Noble Brigand<br>
-                <input type="checkbox" name="nomadcamp" value="exclude">Nomad Camp<br>
-                <input type="checkbox" name="oasis" value="exclude">Oasis<br>
-                <input type="checkbox" name="oracle" value="exclude">Oracle<br>
-                <input type="checkbox" name="scheme" value="exclude">Scheme<br>
-                <input type="checkbox" name="silkroad" value="exclude">Silk Road<br>
-                <input type="checkbox" name="spicemerchant" value="exclude">Spice Merchant<br>
-                <input type="checkbox" name="stables" value="exclude">Stables<br>
-                <input type="checkbox" name="trader" value="exclude">Trader<br>
-                <input type="checkbox" name="tunnel" value="exclude">Tunnel<br>
+                <h2>Hinterlands</h2><input name="bordervillage" type="checkbox" value="exclude">Border Village<br>
+                <input name="cache" type="checkbox" value="exclude">Cache<br>
+                <input name="cartographer" type="checkbox" value="exclude">Cartographer<br>
+                <input name="crossroads" type="checkbox" value="exclude">Crossroads<br>
+                <input name="develop" type="checkbox" value="exclude">Develop<br>
+                <input name="duchess" type="checkbox" value="exclude">Duchess<br>
+                <input name="embassy" type="checkbox" value="exclude">Embassy<br>
+                <input name="farmland" type="checkbox" value="exclude">Farmland<br>
+                <input name="foolsgold" type="checkbox" value="exclude">Fools Gold<br>
+                <input name="haggler" type="checkbox" value="exclude">Haggler<br>
+                <input name="highway" type="checkbox" value="exclude">Highway<br>
+                <input name="illgottengains" type="checkbox" value="exclude">Ill Gotten Gains<br>
+                <input name="inn" type="checkbox" value="exclude">Inn<br>
+                <input name="jackofalltrades" type="checkbox" value="exclude">Jack of all Trades<br>
+                <input name="mandarin" type="checkbox" value="exclude">Mandarin<br>
+                <input name="margrave" type="checkbox" value="exclude">Margrave<br>
+                <input name="noblebrigand" type="checkbox" value="exclude">Noble Brigand<br>
+                <input name="nomadcamp" type="checkbox" value="exclude">Nomad Camp<br>
+                <input name="oasis" type="checkbox" value="exclude">Oasis<br>
+                <input name="oracle" type="checkbox" value="exclude">Oracle<br>
+                <input name="scheme" type="checkbox" value="exclude">Scheme<br>
+                <input name="silkroad" type="checkbox" value="exclude">Silk Road<br>
+                <input name="spicemerchant" type="checkbox" value="exclude">Spice Merchant<br>
+                <input name="stables" type="checkbox" value="exclude">Stables<br>
+                <input name="trader" type="checkbox" value="exclude">Trader<br>
+                <input name="tunnel" type="checkbox" value="exclude">Tunnel<br>
             </div>
             <div id="dark-cards-to-exclude" style="display: none;">
-                <h2>Dark Ages</h2>
-                <input type="checkbox" name="altar" value="exclude">Altar<br>
-                <input type="checkbox" name="armory" value="exclude">Armory<br>
-                <input type="checkbox" name="banditcamp" value="exclude">Bandit Camp<br>
-                <input type="checkbox" name="bandofmisfits" value="exclude">Band of Misfits<br>
-                <input type="checkbox" name="beggar" value="exclude">Beggar<br>
-                <input type="checkbox" name="catacombs" value="exclude">Catacombs<br>
-                <input type="checkbox" name="count" value="exclude">Count<br>
-                <input type="checkbox" name="counterfeit" value="exclude">Counterfeit<br>
-                <input type="checkbox" name="cultist" value="exclude">Cultist<br>
-                <input type="checkbox" name="deathcart" value="exclude">Death Cart<br>
-                <input type="checkbox" name="feodum" value="exclude">Feodum<br>
-                <input type="checkbox" name="forager" value="exclude">Forager<br>
-                <input type="checkbox" name="fortress" value="exclude">Fortress<br>
-                <input type="checkbox" name="graverobber" value="exclude">Grave Robber<br>
-                <input type="checkbox" name="hermit" value="exclude">Hermit<br>
-                <input type="checkbox" name="huntinggrounds" value="exclude">Hunting Grounds<br>
-                <input type="checkbox" name="ironmonger" value="exclude">Iron Monger<br>
-                <input type="checkbox" name="junkdealer" value="exclude">Junk Dealer<br>
-                <input type="checkbox" name="knights" value="exclude">Knights<br>
-                <input type="checkbox" name="marauder" value="exclude">Marauder<br>
-                <input type="checkbox" name="marketsquare" value="exclude">Market Square<br>
-                <input type="checkbox" name="mystic" value="exclude">Mystic<br>
-                <input type="checkbox" name="pillage" value="exclude">Pillage<br>
-                <input type="checkbox" name="poorhouse" value="exclude">Poor House<br>
-                <input type="checkbox" name="procession" value="exclude">Procession<br>
-                <input type="checkbox" name="rats" value="exclude">Rats<br>
-                <input type="checkbox" name="rebuild" value="exclude">Rebuild<br>
-                <input type="checkbox" name="rogue" value="exclude">Rogue<br>
-                <input type="checkbox" name="sage" value="exclude">Sage<br>
-                <input type="checkbox" name="scavenger" value="exclude">Scavenger<br>
-                <input type="checkbox" name="squire" value="exclude">Squire<br>
-                <input type="checkbox" name="storeroom" value="exclude">Storeroom<br>
-                <input type="checkbox" name="urchin" value="exclude">Urchin<br>
-                <input type="checkbox" name="vagrant" value="exclude">Vagrant<br>
-                <input type="checkbox" name="wanderingminstrel" value="exclude">Wandering Minstrel<br>
+                <h2>Dark Ages</h2><input name="altar" type="checkbox" value="exclude">Altar<br>
+                <input name="armory" type="checkbox" value="exclude">Armory<br>
+                <input name="banditcamp" type="checkbox" value="exclude">Bandit Camp<br>
+                <input name="bandofmisfits" type="checkbox" value="exclude">Band of Misfits<br>
+                <input name="beggar" type="checkbox" value="exclude">Beggar<br>
+                <input name="catacombs" type="checkbox" value="exclude">Catacombs<br>
+                <input name="count" type="checkbox" value="exclude">Count<br>
+                <input name="counterfeit" type="checkbox" value="exclude">Counterfeit<br>
+                <input name="cultist" type="checkbox" value="exclude">Cultist<br>
+                <input name="deathcart" type="checkbox" value="exclude">Death Cart<br>
+                <input name="feodum" type="checkbox" value="exclude">Feodum<br>
+                <input name="forager" type="checkbox" value="exclude">Forager<br>
+                <input name="fortress" type="checkbox" value="exclude">Fortress<br>
+                <input name="graverobber" type="checkbox" value="exclude">Grave Robber<br>
+                <input name="hermit" type="checkbox" value="exclude">Hermit<br>
+                <input name="huntinggrounds" type="checkbox" value="exclude">Hunting Grounds<br>
+                <input name="ironmonger" type="checkbox" value="exclude">Iron Monger<br>
+                <input name="junkdealer" type="checkbox" value="exclude">Junk Dealer<br>
+                <input name="knights" type="checkbox" value="exclude">Knights<br>
+                <input name="marauder" type="checkbox" value="exclude">Marauder<br>
+                <input name="marketsquare" type="checkbox" value="exclude">Market Square<br>
+                <input name="mystic" type="checkbox" value="exclude">Mystic<br>
+                <input name="pillage" type="checkbox" value="exclude">Pillage<br>
+                <input name="poorhouse" type="checkbox" value="exclude">Poor House<br>
+                <input name="procession" type="checkbox" value="exclude">Procession<br>
+                <input name="rats" type="checkbox" value="exclude">Rats<br>
+                <input name="rebuild" type="checkbox" value="exclude">Rebuild<br>
+                <input name="rogue" type="checkbox" value="exclude">Rogue<br>
+                <input name="sage" type="checkbox" value="exclude">Sage<br>
+                <input name="scavenger" type="checkbox" value="exclude">Scavenger<br>
+                <input name="squire" type="checkbox" value="exclude">Squire<br>
+                <input name="storeroom" type="checkbox" value="exclude">Storeroom<br>
+                <input name="urchin" type="checkbox" value="exclude">Urchin<br>
+                <input name="vagrant" type="checkbox" value="exclude">Vagrant<br>
+                <input name="wanderingminstrel" type="checkbox" value="exclude">Wandering Minstrel<br>
             </div>
             <div id="guilds-cards-to-exclude" style="display: none;">
-                <h2>Guilds</h2>
-                <input type="checkbox" name="advisor" value="exclude">Advisor<br>
-                <input type="checkbox" name="baker" value="exclude">Baker<br>
-                <input type="checkbox" name="butcher" value="exclude">Butcher<br>
-                <input type="checkbox" name="candlestickmaker" value="exclude">Candlestick Maker<br>
-                <input type="checkbox" name="doctor" value="exclude">Doctor<br>
-                <input type="checkbox" name="herald" value="exclude">Herald<br>
-                <input type="checkbox" name="journeyman" value="exclude">Journeyman<br>
-                <input type="checkbox" name="masterpiece" value="exclude">Masterpiece<br>
-                <input type="checkbox" name="merchantguild" value="exclude">Merchant Guild<br>
-                <input type="checkbox" name="plaza" value="exclude">Plaza<br>
-                <input type="checkbox" name="soothsayer" value="exclude">Soothsayer<br>
-                <input type="checkbox" name="stonemason" value="exclude">Stonemason<br>
-                <input type="checkbox" name="taxman" value="exclude">Taxman<br>
+                <h2>Guilds</h2><input name="advisor" type="checkbox" value="exclude">Advisor<br>
+                <input name="baker" type="checkbox" value="exclude">Baker<br>
+                <input name="butcher" type="checkbox" value="exclude">Butcher<br>
+                <input name="candlestickmaker" type="checkbox" value="exclude">Candlestick Maker<br>
+                <input name="doctor" type="checkbox" value="exclude">Doctor<br>
+                <input name="herald" type="checkbox" value="exclude">Herald<br>
+                <input name="journeyman" type="checkbox" value="exclude">Journeyman<br>
+                <input name="masterpiece" type="checkbox" value="exclude">Masterpiece<br>
+                <input name="merchantguild" type="checkbox" value="exclude">Merchant Guild<br>
+                <input name="plaza" type="checkbox" value="exclude">Plaza<br>
+                <input name="soothsayer" type="checkbox" value="exclude">Soothsayer<br>
+                <input name="stonemason" type="checkbox" value="exclude">Stonemason<br>
+                <input name="taxman" type="checkbox" value="exclude">Taxman<br>
             </div>
             <div id="adventures-cards-to-exclude" style="display: none;">
-                <h2>Adventures</h2>
-                <input type="checkbox" name="amulet" value="exclude">Amulet<br>
-                <input type="checkbox" name="artificer" value="exclude">Artificer<br>
-                <input type="checkbox" name="bridgetroll" value="exclude">Bridge Troll<br>
-                <input type="checkbox" name="caravanguard" value="exclude">Caravan Guard<br>
-                <input type="checkbox" name="coinoftherealm" value="exclude">Coin of the Realm<br>
-                <input type="checkbox" name="distantlands" value="exclude">Distant Lands<br>
-                <input type="checkbox" name="dungeon" value="exclude">Dungeon<br>
-                <input type="checkbox" name="duplicate" value="exclude">Duplicate<br>
-                <input type="checkbox" name="gear" value="exclude">Gear<br>
-                <input type="checkbox" name="giant" value="exclude">Giant<br>
-                <input type="checkbox" name="guide" value="exclude">Guide<br>
-                <input type="checkbox" name="hauntedwoods" value="exclude">Haunted Woods<br>
-                <input type="checkbox" name="hireling" value="exclude">Hireling<br>
-                <input type="checkbox" name="lostcity" value="exclude">Lost City<br>
-                <input type="checkbox" name="magpie" value="exclude">Magpie<br>
-                <input type="checkbox" name="messenger" value="exclude">Messenger<br>
-                <input type="checkbox" name="miser" value="exclude">Miser<br>
-                <input type="checkbox" name="page" value="exclude">Page<br>
-                <input type="checkbox" name="peasant" value="exclude">Peasant<br>
-                <input type="checkbox" name="port" value="exclude">Port<br>
-                <input type="checkbox" name="ranger" value="exclude">Ranger<br>
-                <input type="checkbox" name="ratcatcher" value="exclude">Rat Catcher<br>
-                <input type="checkbox" name="raze" value="exclude">Raze<br>
-                <input type="checkbox" name="relic" value="exclude">Relic<br>
-                <input type="checkbox" name="royalcarriage" value="exclude">Royal Carriage<br>
-                <input type="checkbox" name="storyteller" value="exclude">Story Teller<br>
-                <input type="checkbox" name="swamphag" value="exclude">Swamp Hag<br>
-                <input type="checkbox" name="transmogrify" value="exclude">Transmogrify<br>
-                <input type="checkbox" name="treasuretrove" value="exclude">Treasure Trove<br>
-                <input type="checkbox" name="winemerchant" value="exclude">Wine Merchant<br>
+                <h2>Adventures</h2><input name="amulet" type="checkbox" value="exclude">Amulet<br>
+                <input name="artificer" type="checkbox" value="exclude">Artificer<br>
+                <input name="bridgetroll" type="checkbox" value="exclude">Bridge Troll<br>
+                <input name="caravanguard" type="checkbox" value="exclude">Caravan Guard<br>
+                <input name="coinoftherealm" type="checkbox" value="exclude">Coin of the Realm<br>
+                <input name="distantlands" type="checkbox" value="exclude">Distant Lands<br>
+                <input name="dungeon" type="checkbox" value="exclude">Dungeon<br>
+                <input name="duplicate" type="checkbox" value="exclude">Duplicate<br>
+                <input name="gear" type="checkbox" value="exclude">Gear<br>
+                <input name="giant" type="checkbox" value="exclude">Giant<br>
+                <input name="guide" type="checkbox" value="exclude">Guide<br>
+                <input name="hauntedwoods" type="checkbox" value="exclude">Haunted Woods<br>
+                <input name="hireling" type="checkbox" value="exclude">Hireling<br>
+                <input name="lostcity" type="checkbox" value="exclude">Lost City<br>
+                <input name="magpie" type="checkbox" value="exclude">Magpie<br>
+                <input name="messenger" type="checkbox" value="exclude">Messenger<br>
+                <input name="miser" type="checkbox" value="exclude">Miser<br>
+                <input name="page" type="checkbox" value="exclude">Page<br>
+                <input name="peasant" type="checkbox" value="exclude">Peasant<br>
+                <input name="port" type="checkbox" value="exclude">Port<br>
+                <input name="ranger" type="checkbox" value="exclude">Ranger<br>
+                <input name="ratcatcher" type="checkbox" value="exclude">Rat Catcher<br>
+                <input name="raze" type="checkbox" value="exclude">Raze<br>
+                <input name="relic" type="checkbox" value="exclude">Relic<br>
+                <input name="royalcarriage" type="checkbox" value="exclude">Royal Carriage<br>
+                <input name="storyteller" type="checkbox" value="exclude">Story Teller<br>
+                <input name="swamphag" type="checkbox" value="exclude">Swamp Hag<br>
+                <input name="transmogrify" type="checkbox" value="exclude">Transmogrify<br>
+                <input name="treasuretrove" type="checkbox" value="exclude">Treasure Trove<br>
+                <input name="winemerchant" type="checkbox" value="exclude">Wine Merchant<br>
             </div>
             <div id="empires-cards-to-exclude" style="display: none;">
-                <h2>Empires</h2>
-                <input type="checkbox" name="archive" value="exclude">Archive<br>
+                <h2>Empires</h2><input name="archive" type="checkbox" value="exclude">Archive<br>
                 <!--
                     see description in card dictionary as to why this can't get picked
                     <input type="checkbox" name="bustlingvillage" value="exclude">Bustling Village<br>
                     -->
-                <input type="checkbox" name="capital" value="exclude">Capital<br>
-                <input type="checkbox" name="castles" value="exclude">Castles<br>
-                <input type="checkbox" name="catapult" value="exclude">Catapult<br>
-                <input type="checkbox" name="chariotrace" value="exclude">Chariot Race<br>
-                <input type="checkbox" name="charm" value="exclude">Charm<br>
-                <input type="checkbox" name="cityquarter" value="exclude">City Quarter<br>
-                <input type="checkbox" name="crown" value="exclude">Crown<br>
+                 <input name="capital" type="checkbox" value="exclude">Capital<br>
+                <input name="castles" type="checkbox" value="exclude">Castles<br>
+                <input name="catapult" type="checkbox" value="exclude">Catapult<br>
+                <input name="chariotrace" type="checkbox" value="exclude">Chariot Race<br>
+                <input name="charm" type="checkbox" value="exclude">Charm<br>
+                <input name="cityquarter" type="checkbox" value="exclude">City Quarter<br>
+                <input name="crown" type="checkbox" value="exclude">Crown<br>
                 <!--
                     <input type="checkbox" name="emporium" value="exclude">Emporium<br>
                     -->
-                <input type="checkbox" name="encampment" value="exclude">Encampment<br>
-                <input type="checkbox" name="enchantress" value="exclude">Enchantress<br>
-                <input type="checkbox" name="engineer" value="exclude">Engineer<br>
-                <input type="checkbox" name="farmersmarket" value="exclude">Farmers Market<br>
+                 <input name="encampment" type="checkbox" value="exclude">Encampment<br>
+                <input name="enchantress" type="checkbox" value="exclude">Enchantress<br>
+                <input name="engineer" type="checkbox" value="exclude">Engineer<br>
+                <input name="farmersmarket" type="checkbox" value="exclude">Farmers Market<br>
                 <!--
                     <input type="checkbox" name="fortune" value="exclude">Fortune<br>
                     -->
-                <input type="checkbox" name="forum" value="exclude">Forum<br>
-                <input type="checkbox" name="gladiator" value="exclude">Gladiator<br>
-                <input type="checkbox" name="groundskeeper" value="exclude">Grounds Keeper<br>
-                <input type="checkbox" name="legionary" value="exclude">Legionary<br>
-                <input type="checkbox" name="overlord" value="exclude">Overlord<br>
-                <input type="checkbox" name="patrician" value="exclude">Patrician<br>
+                 <input name="forum" type="checkbox" value="exclude">Forum<br>
+                <input name="gladiator" type="checkbox" value="exclude">Gladiator<br>
+                <input name="groundskeeper" type="checkbox" value="exclude">Grounds Keeper<br>
+                <input name="legionary" type="checkbox" value="exclude">Legionary<br>
+                <input name="overlord" type="checkbox" value="exclude">Overlord<br>
+                <input name="patrician" type="checkbox" value="exclude">Patrician<br>
                 <!--I HATE SPLIT CARDS!! THEYRE SO ANNOYING
                     <input type="checkbox" name="plunder" value="exclude">Plunder<br>-->
-                <!--
+                 <!--
                     <input type="checkbox" name="rocks" value="exclude">Rocks<br>
                     -->
-                <input type="checkbox" name="royalblacksmith" value="exclude">Royal Blacksmith<br>
-                <input type="checkbox" name="sacrifice" value="exclude">Sacrifice<br>
-                <input type="checkbox" name="settlers" value="exclude">Settlers<br>
-                <input type="checkbox" name="temple" value="exclude">Temple<br>
-                <input type="checkbox" name="villa" value="exclude">Villa<br>
-                <input type="checkbox" name="wildhunt" value="exclude">Wild Hunt<br>
+                 <input name="royalblacksmith" type="checkbox" value="exclude">Royal Blacksmith<br>
+                <input name="sacrifice" type="checkbox" value="exclude">Sacrifice<br>
+                <input name="settlers" type="checkbox" value="exclude">Settlers<br>
+                <input name="temple" type="checkbox" value="exclude">Temple<br>
+                <input name="villa" type="checkbox" value="exclude">Villa<br>
+                <input name="wildhunt" type="checkbox" value="exclude">Wild Hunt<br>
             </div>
             <div id="promo-cards-to-exclude" style="display: none;">
-                <h2>Promo Cards</h2>
-                <span style="display: none;" id="envoy-cards-to-exclude"><input type="checkbox" id="envoy-cards-to-exclude" name="envoy" value="exclude">Envoy<br></span>
-                <span style="display: none;" id="governor-cards-to-exclude"><input type="checkbox" id="governor-cards-to-exclude" name="governor" value="exclude">Governor<br></span>
-                <span style="display: none;" id="prince-cards-to-exclude"><input type="checkbox" id="prince-cards-to-exclude" name="prince" value="exclude">Prince<br></span>
-                <span style="display: none;" id="stash-cards-to-exclude"><input type="checkbox" id="stash-cards-to-exclude" name="stash" value="exclude">Stash<br></span>
-                <span style="display: none;" id="walledvilage-cards-to-exclude"><input type="checkbox" id="walledvilage-cards-to-exclude" name="walledvillage" value="exclude">Walled Village<br></span>
-                <span style="display: none;" id="sauna-cards-to-exclude"><input type="checkbox" id="sauna-cards-to-exclude" name="sauna" value="exclude">Sauna<br></span>
-            </div>
-            <!--FOR FUTURE SETS:
+                <h2>Promo Cards</h2><span id="envoy-cards-to-exclude" style="display: none;"><input id="envoy-cards-to-exclude" name="envoy" type="checkbox" value="exclude">Envoy<br></span> <span id="governor-cards-to-exclude" style="display: none;"><input id="governor-cards-to-exclude" name="governor" type="checkbox" value="exclude">Governor<br></span> <span id="prince-cards-to-exclude" style="display: none;"><input id="prince-cards-to-exclude" name="prince" type="checkbox" value="exclude">Prince<br></span> <span id="stash-cards-to-exclude" style="display: none;"><input id="stash-cards-to-exclude" name="stash" type="checkbox" value="exclude">Stash<br></span> <span id="walledvilage-cards-to-exclude" style="display: none;"><input id="walledvilage-cards-to-exclude" name="walledvillage" type="checkbox" value="exclude">Walled Village<br></span> <span id="sauna-cards-to-exclude" style="display: none;"><input id="sauna-cards-to-exclude" name="sauna" type="checkbox" value="exclude">Sauna<br></span>
+            </div><!--FOR FUTURE SETS:
                 <div id="setname-cards-to-exclude" style="display: none;">p
                     <h2></h2>
                     <input type="checkbox" name="" value="exclude"><br>
                 </div>
                 -->
-            <button type="button" onclick="exclude_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">Continue</button>
+            <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="exclude_cards()" type="button">Continue</button>
         </form>
     </div>
     <div id="deck_select" style="display:none;">
-        <h1 id="cards_left_h1">
-            Your deck has been completed
-        </h1>
+        <h1 id="cards_left_h1">Your deck has been completed</h1>
         <div id="cards_selected">
             <div id="cardmenu">
                 <!--non desktop version:-->
                 <div id="cards_selected">
-                    <span id="card_1_image"></span>
-                    <span id="card_2_image"></span>
-                    <span id="card_3_image"></span>
+                    <span id="card_1_image"></span> <span id="card_2_image"></span> <span id="card_3_image"></span>
                     <div class="w3-btn-group">
-                        <button style="display: none;" id="buy1" type="button" onclick="buy(1)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                                Buy card <span id="card_1_name"></span>
-                            </button>
-                        <button style="display: none;" id="buy2" type="button" onclick="buy(2)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                                Buy card <span id="card_2_name"></span>
-                            </button>
-                        <button style="display: none;" id="buy3" type="button" onclick="buy(3)" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                                Buy card <span id="card_3_name"></span>
-                            </button>
-                        <button style="display: none;" id="buynone" type="button" onclick="discardall()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                            Discard All
-                        </button>
+                        <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" id="buy1" onclick="buy(1)" style="display: none;" type="button">Buy card <span id="card_1_name"></span></button> <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" id="buy2" onclick="buy(2)" style="display: none;" type="button">Buy card <span id="card_2_name"></span></button> <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" id="buy3" onclick="buy(3)" style="display: none;" type="button">Buy card <span id="card_3_name"></span></button> <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" id="buynone" onclick="discardall()" style="display: none;" type="button">Discard All</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <button id="draw_button" type="button" onclick="draw_cards()" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                Draw Cards
-            </button>
+        </div><button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" id="draw_button" onclick="draw_cards()" type="button">Draw Cards</button>
         <div id="rememberto">
             <span id="topoflist">Remember to:</span>
             <ul>
@@ -447,17 +402,10 @@
         </div>
     </div>
     <div id="done" style="display: none;">
-        <h1>
-            The Black Market Deck is Empty!
-        </h1>
-        <br>
-        <button onclick="location='';" class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow">
-                Make another deck
-        </button>
-    </div>
-</body>
-
-</html>
-<!--
+        <h1>The Black Market Deck is Empty!</h1><br>
+        <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="location='';">Make another deck</button>
+    </div><!--
 01001000 01100101 01101100 01101100 01101111 00101110 00100000 00100000 01011001 01101111 01110101 00100111 01110010 01100101 00100000 01101100 01101111 01101111 01101011 01101001 01101110 01100111 00100000 01100001 01110100 00100000 01110100 01101000 01100101 00100000 01110011 01101111 01110101 01110010 01100011 01100101 00100000 01100011 01101111 01100100 01100101 00101110 00100000 00100000 01010100 01101000 01100001 01110100 00100111 01110011 00100000 01100011 01101111 01101111 01101100 00101110 00100000 00100000 01001001 01100110 00100000 01111001 01101111 01110101 00100111 01110010 01100101 00100000 01101100 01101111 01101111 01101011 01101001 01101110 01100111 00100000 01110100 01101111 00100000 01100011 01101111 01101110 01110100 01100001 01100011 01110100 00100000 01101101 01100101 00101100 00100000 01100100 01101111 00100000 01110011 01101111 00100000 01100001 01110100 00100000 01101101 01101111 01110011 01110100 01100100 01101001 01100111 01101001 01110100 01110011 01101111 01100110 01110000 01101001 01000000 01100111 01101101 01100001 01101001 01101100 00101110 01100011 01101111 01101101 00101110 00100000 01001111 01110100 01101000 01100101 01110010 01110111 01101001 01110011 01100101 00101100 00100000 01111001 01101111 01110101 00100000 01110011 01101000 01101111 01110101 01101100 01100100 00100000 01101011 01101110 01101111 01110111 00100000 01110100 01101000 01100001 01110100 00100000 01110000 01110010 01101111 01100111 01110010 01100001 01101101 01101101 01100101 01110010 01110011 00100000 01100001 01110010 01100101 00100000 01110010 01100101 01100001 01101100 00100000 01110000 01100101 01101111 01110000 01101100 01100101 00101100 00100000 01100001 01101110 01100100 00100000 01110100 01101000 01100001 01110100 00100111 01110011 00100000 01110111 01101000 01111001 00100000 01001001 00100111 01101101 00100000 01100010 01110101 01101001 01101100 01100100 01101001 01101110 01100111 00100000 01110100 01101000 01101001 01110011 00100000 01101001 01101110 01110100 01101111 00100000 01110100 01101000 01101001 01110011 00100000 01110000 01110010 01101111 01100111 01110010 01100001 01101101 00101110 00100000 00100000 01010111 01100101 00100000 01100101 01111000 01101001 01110011 01110100 00100000 01110100 01101111 01101111 00101110 00100000 00100000 01001001 01100110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01100100 01100101 00100000 01100100 01101111 01100101 01110011 01101110 00100111 01110100 00100000 01110111 01101111 01110010 01101011 00101100 00100000 01111001 01101111 01110101 00100000 01000011 01000001 01001110 00100000 01100011 01101111 01101110 01110100 01100001 01100011 01110100 00100000 01101101 01100101 00101100 00100000 01100001 01101110 01100100 00100000 01001001 00100000 01010111 01001001 01001100 01001100 00100000 01101000 01100101 01101100 01110000 00100000 01111001 01101111 01110101 00101110 00001101 00001010 00001101 00001010 01010100 01101000 01100001 01101110 01101011 01110011
 -->
+</body>
+</html>
