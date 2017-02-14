@@ -11,27 +11,27 @@
     <div id="choose_sets">
         <h1>Select the sets you want, and click Generate Deck.</h1>
         <form action="" id="sets" method="get" name="sets">
-            <h2>Sets</h2><input class="dominion_sets" name="base" type="checkbox" value="Base">Base Set<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base1" type="checkbox" value="Base1">1st edition exclusive cards<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base2" type="checkbox" value="Base2">2st edition exclusive cards<br>
-            <input class="dominion_sets" name="intrigue" type="checkbox" value="Intrigue">Intrigue<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue1" type="checkbox" value="Intrigue1">1st edition exclusive cards<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue2" type="checkbox" value="Intrigue2">2st edition exclusive cards<br>
-            <input class="dominion_sets" name="seaside" type="checkbox" value="Seaside">Seaside<br>
-            <input class="dominion_sets" name="alchemy" type="checkbox" value="Alchemy">Alchemy<br>
-            <input class="dominion_sets" name="prosperity" type="checkbox" value="Prosperity">Prosperity<br>
-            <input class="dominion_sets" name="cornucopia" type="checkbox" value="Cornucopia">Cornucopia<br>
-            <input class="dominion_sets" name="hinterlands" type="checkbox" value="Hinterlands">Hinterlands<br>
-            <input class="dominion_sets" name="dark" type="checkbox" value="Dark">Dark Ages<br>
-            <input class="dominion_sets" name="guilds" type="checkbox" value="Guilds">Guilds<br>
-            <input class="dominion_sets" name="adventures" type="checkbox" value="Adventures">Adventures<br>
-            <input class="dominion_sets" name="empires" type="checkbox" value="Empires">Empires<br>
-            <h2>Promo Cards</h2><input class="dominion_sets" name="envoy" type="checkbox" value="Envoy">Envoy<br>
-            <input class="dominion_sets" name="walled" type="checkbox" value="Walled">Walled Village<br>
-            <input class="dominion_sets" name="governor" type="checkbox" value="Governor">Governor<br>
-            <input class="dominion_sets" name="stash" type="checkbox" value="Stash">Stash<br>
-            <input class="dominion_sets" name="prince" type="checkbox" value="Prince">Prince<br>
-            <input class="dominion_sets" name="sauna" type="checkbox" value="Sauna">Sauna<br>
+            <h2 style="cursor:help" title="Sets are sold either as stand-alone sets or as expansions.">Sets</h2><input class="dominion_sets" name="base" type="checkbox" value="Base" style="cursor:help" title="The cards in the Base Set that are in the first and second editions">Base Set<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base1" type="checkbox" value="Base1" style="cursor:help" title="The cards in the Base Set that are only in the first edition">1st edition exclusive cards<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="base2" type="checkbox" value="Base2" style="cursor:help" title="The cards in the Base Set that are only in the second edition">2st edition exclusive cards<br>
+            <input class="dominion_sets" name="intrigue" type="checkbox" value="Intrigue" style="cursor:help" title="The cards in Intrigue that are in the first and second editions">Intrigue<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue1" type="checkbox" value="Intrigue1" style="cursor:help" title="The cards in Intrigue that are only in the first edition">1st edition exclusive cards<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <input class="dominion_sets" name="intrigue2" type="checkbox" value="Intrigue2" style="cursor:help" title="The cards in Intrigue that are only in the second edition">2st edition exclusive cards<br>
+            <input class="dominion_sets" name="seaside" type="checkbox" value="Seaside" style="cursor:help" title="All of the cards in Seaside">Seaside<br>
+            <input class="dominion_sets" name="alchemy" type="checkbox" value="Alchemy" style="cursor:help" title="All of the cards in Alchemy">Alchemy<br>
+            <input class="dominion_sets" name="prosperity" type="checkbox" value="Prosperity" style="cursor:help" title="All of the cards in Prosperity">Prosperity<br>
+            <input class="dominion_sets" name="cornucopia" type="checkbox" value="Cornucopia" style="cursor:help" title="All of the cards in Cornucopia">Cornucopia<br>
+            <input class="dominion_sets" name="hinterlands" type="checkbox" value="Hinterlands" style="cursor:help" title="All of the cards in Hinterlands">Hinterlands<br>
+            <input class="dominion_sets" name="dark" type="checkbox" value="Dark" style="cursor:help" title="All of the cards in Dark Ages">Dark Ages<br>
+            <input class="dominion_sets" name="guilds" type="checkbox" value="Guilds" style="cursor:help" title="All of the cards in Guilds">Guilds<br>
+            <input class="dominion_sets" name="adventures" type="checkbox" value="Adventures" style="cursor:help" title="All of the cards in Adventures">Adventures<br>
+            <input class="dominion_sets" name="empires" type="checkbox" value="Empires" style="cursor:help" title="All of the cards in Empires">Empires<br>
+            <h2 style="cursor:help" title="Promo cards are given away at special events, or sold later, at a higher price.  They only contain a single card.">Promo Cards</h2><input class="dominion_sets" name="envoy" type="checkbox" value="Envoy" style="cursor:help" title="The Envoy promo card">Envoy<br>
+            <input class="dominion_sets" name="walled" type="checkbox" value="Walled" style="cursor:help" title="The Walled Village promo card">Walled Village<br>
+            <input class="dominion_sets" name="governor" type="checkbox" value="Governor" style="cursor:help" title="The Governor promo card">Governor<br>
+            <input class="dominion_sets" name="stash" type="checkbox" value="Stash" style="cursor:help" title="The Stash promo card">Stash<br>
+            <input class="dominion_sets" name="prince" type="checkbox" value="Prince" style="cursor:help" title="The Prince promo card">Prince<br>
+            <input class="dominion_sets" name="sauna" type="checkbox" value="Sauna" style="cursor:help" title="The Sauna promo card">Sauna<br>
             <div class="w3-btn-group">
                 <input class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" name="all" onclick="checkAll('sets',true);" type="button" value="Select All"> <input class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" name="all" onclick="checkAll('sets',false);" type="button" value="Unselect All"> <button class="w3-btn w3-black w3-hover-red w3-round-xxlarge w3-border-black w3-text-shadow" onclick="generate()" type="button">Generate Deck</button>
             </div>
